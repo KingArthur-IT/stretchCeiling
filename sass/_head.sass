@@ -1,0 +1,70 @@
+.head
+    min-height: 100vh
+    background: url('../assets/main-bg.png') no-repeat
+    background-size: cover
+    background-position-x: 100%
+    background-position-y: 100%
+    padding: 200px 0 100px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__hero
+    &__label
+        width: fit-content
+        box-shadow: inset 0px 5px 3px rgba(255, 255, 255, 0.15)
+        filter: drop-shadow(0px 20px 80px #0D1709)
+        backdrop-filter: blur(7.5px)
+        border-radius: 70px
+        padding: 13px 25px
+        margin-bottom: 32px
+        font-family: 'Colus'
+        font-style: normal
+        font-weight: 400
+        font-size: 32px
+        line-height: 1.25
+        color: #fff
+        background: url("../assets/head-label-bg.png") no-repeat
+        background-size: 100% 100%
+    &__title
+        color: #fff
+        margin-bottom: 32px
+        & span
+            font-family: 'Colus'
+            color: $primary
+    &__text
+        max-width: 400px
+        font-size: 24px
+        line-height: 130%
+        color: #FFFFFF
+        margin-bottom: 32px
+        & span
+            color: $primary
+            font-size: 32px
+            font-weight: 700
+    &__btns
+        display: flex
+        align-items: center
+    &__order
+        padding: 11px 36px
+        margin-right: 28px
+    &__consult
+        position: relative
+        background: rgba(255, 255, 255, 0.15)
+        border-radius: 36px
+        color: #292929
+        font-weight: 700
+        font-size: 18px
+        padding: 18px 31px
+        z-index: 0
+        &::before
+            content: ""
+            position: absolute
+            top: 6px
+            left: 6px
+            bottom: 6px
+            right: 6px
+            background: rgba(255, 255, 255, 0.4)
+            border: 1px solid #fff
+            border-radius: 56px
+            z-index: -1
+            border-radius: 36px
