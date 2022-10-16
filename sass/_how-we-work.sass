@@ -1,0 +1,57 @@
+.how-we-work
+    background-color: $light-bg
+    overflow: hidden
+    &__hero
+    &__top-design
+        position: absolute
+        top: 
+        left: 0
+        width: 308px
+        height: 202px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        transform: rotate(65deg)
+        z-index: 0
+    &__center-design
+        position: absolute
+        width: 360px
+        height: 316px
+        top: 50%
+        left: 50%
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.2) 0%, rgba(17, 142, 90, 0.2) 100%)
+        filter: blur(51.5px)
+        transform: rotate(53.6deg) translate(-40%, 50%)
+        z-index: 0
+    &__title
+        color: #001804
+        text-align: center
+        margin-bottom: 10px
+    &__list
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:nth-child(2)
+            margin-top: -40px
+            margin-bottom: -40px
+            & .how-we-work__text-wrap
+                margin-right: 0
+                margin-left: 40px
+    &__text-wrap
+        display: flex
+        align-items: center
+        margin-right: 40px
+    &__num
+        font-weight: 700
+        font-size: 32px
+        line-height: 130%
+        margin-right: 60px
+    &__text
+        font-size: 24px
+        line-height: 130%
+        color: #292929
+    &__img
+        max-width: 260px
+    &__btn
+        margin: auto
+        padding: 11px 36px

@@ -500,3 +500,97 @@ ul {
   padding: 11px 36px;
   margin: auto;
 }
+
+.how-we-work {
+  background-color: #F3F3F3;
+  overflow: hidden;
+}
+
+.how-we-work__top-design {
+  position: absolute;
+  left: 0;
+  width: 308px;
+  height: 202px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.3)), to(rgba(17, 142, 90, 0.3)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  -webkit-transform: rotate(65deg);
+          transform: rotate(65deg);
+  z-index: 0;
+}
+
+.how-we-work__center-design {
+  position: absolute;
+  width: 360px;
+  height: 316px;
+  top: 50%;
+  left: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.2)), to(rgba(17, 142, 90, 0.2)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.2) 0%, rgba(17, 142, 90, 0.2) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  -webkit-transform: rotate(53.6deg) translate(-40%, 50%);
+          transform: rotate(53.6deg) translate(-40%, 50%);
+  z-index: 0;
+}
+
+.how-we-work__title {
+  color: #001804;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.how-we-work__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-we-work__item:nth-child(2) {
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.how-we-work__item:nth-child(2) .how-we-work__text-wrap {
+  margin-right: 0;
+  margin-left: 40px;
+}
+
+.how-we-work__text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+}
+
+.how-we-work__num {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  margin-right: 60px;
+}
+
+.how-we-work__text {
+  font-size: 24px;
+  line-height: 130%;
+  color: #292929;
+}
+
+.how-we-work__img {
+  max-width: 260px;
+}
+
+.how-we-work__btn {
+  margin: auto;
+  padding: 11px 36px;
+}
