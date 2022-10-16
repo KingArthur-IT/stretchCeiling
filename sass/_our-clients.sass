@@ -1,0 +1,79 @@
+.our-clients
+    background-color: $dark-bg
+    overflow: hidden
+    &__top-design
+        position: absolute
+        z-index: 0
+        width: 436px
+        height: 285px
+        top: 10%
+        right: 25%
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%)
+        filter: blur(51.5px)
+        transform: rotate(53.6deg)
+    &__left-design
+        position: absolute
+        z-index: 0
+        width: 250px
+        height: 163px
+        top: 65%
+        left: 10%
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%)
+        filter: blur(51.5px)
+        transform: rotate(19.49deg)
+    &__hero
+    &__title
+        text-align: center
+        color: #fff
+        margin-bottom: 32px
+        position: relative
+        z-index: 2
+    &__list
+        display: flex
+        justify-content: space-between
+        width: calc(100% + 40px)
+        transform: translateX(-20px)
+        margin-bottom: 48px
+    &__item-wrap
+        padding: 0 20px
+    &__item
+        flex-basis: 25%
+    &__img
+        margin-bottom: 16px
+        width: 100%
+        border-radius: 10px
+    &__name
+        font-weight: 700
+        font-size: 24px
+        line-height: 133%
+        color: #FFFFFF
+        text-align: center
+        margin-bottom: 5px
+    &__stars
+        display: block
+        margin: auto
+    &__marks
+        max-width: 473px
+        margin: auto
+    &__mark
+        margin-bottom: 16px
+    &__mark-category
+        font-weight: 700
+        font-size: 24px
+        line-height: 133%
+        color: #FFFFFF
+        margin-bottom: 16px
+    &__mark-progress
+        width: 100%
+        height: 10px
+        background: #fff
+        position: relative
+        border-radius: 7px
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            width: 97%
+            background: $primary
