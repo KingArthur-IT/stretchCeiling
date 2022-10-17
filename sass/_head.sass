@@ -33,8 +33,6 @@
             color: $primary
     &__text
         max-width: 400px
-        font-size: 24px
-        line-height: 130%
         color: #FFFFFF
         margin-bottom: 32px
         & span
@@ -74,3 +72,52 @@
             left: 0px
             bottom: 0px
             right: 0px
+
+@media screen and (max-width: 1024px)
+    .head
+        &__label
+            font-size: 28px
+            margin-bottom: 28px
+        &__title
+            margin-bottom: 28px
+        &__text span
+            font-size: 28px
+@media screen and (max-width: 768px)
+    .head
+        &__label
+            font-size: 24px
+            margin-bottom: 24px
+        &__title
+            margin-bottom: 24px
+        &__text span
+            font-size: 26px
+@media screen and (max-width: 675px)
+    .head
+        padding: 150px 0 100px
+        &__btns
+            flex-direction: column
+            align-items: flex-start
+        &__order
+            margin-right: 0
+            margin-bottom: 14px
+            min-width: 290px
+@media screen and (max-width: 425px)
+    .head
+        padding: 120px 0 60px
+        &__label
+            font-size: 18px
+            margin-bottom: 18px
+        &__title
+            margin-bottom: 18px
+        &__text 
+            margin-bottom: 18px
+            & span
+                font-size: 22px
+        &__order
+            min-width: 260px
+        &__consult
+            font-size: 16px
+@media screen and (max-width: 350px)
+    .head
+        &__label
+            font-size: 16px
