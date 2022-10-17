@@ -42,16 +42,75 @@
         align-items: center
         margin-right: 40px
     &__num
+        color: #292929
         font-weight: 700
         font-size: 32px
         line-height: 130%
         margin-right: 60px
     &__text
-        font-size: 24px
-        line-height: 130%
         color: #292929
     &__img
         max-width: 260px
     &__btn
         margin: auto
         padding: 11px 36px
+
+@media screen and (max-width: 1024px)
+    .how-we-work
+        &__num
+            font-size: 28px
+            margin-right: 30px
+
+@media screen and (max-width: 768px)
+    .how-we-work
+        &__item
+            &:nth-child(2)
+                margin-top: 20px
+                margin-bottom: 20px
+                & .how-we-work__text-wrap
+                    margin-left: 20px
+        &__img
+            max-width: 200px
+        &__num
+            align-self: flex-start
+        &__text-wrap
+            margin-right: 20px
+
+@media screen and (max-width: 600px)
+    .how-we-work
+        &__list
+            margin-bottom: 30px
+        &__img
+            max-width: 150px
+        &__text
+            font-size: 18px
+        &__num
+            font-size: 22px
+            margin-right: 20px
+
+@media screen and (max-width: 450px)
+    .how-we-work
+        &__img
+            max-width: 100px
+
+@media screen and (max-width: 425px)
+    .how-we-work
+        &__text
+            font-size: 16px
+        &__num
+            font-size: 18px
+        &__title
+            margin-bottom: 20px
+
+@media screen and (max-width: 375px)
+    .how-we-work
+        &__text-wrap
+            margin-right: 10px
+        &__item
+            &:nth-child(2)
+                & .how-we-work__text-wrap
+                    margin-left: 10px
+        &__num
+            margin-right: 10px
+        &__img
+            max-width: 80px
