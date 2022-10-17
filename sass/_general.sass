@@ -39,18 +39,27 @@ ul
     position: relative
     background: #0B6741
     border-radius: 48px
-    color: #fff
-    font-family: 'Colus'
-    font-size: 32px
-    line-height: 1.25
     z-index: 0
+    & span
+        color: #fff
+        font-family: 'Colus'
+        font-size: 32px
+        line-height: 1.25
+        transition: transform .1s ease-in
     &::before
         content: ""
         position: absolute
-        top: 0
+        top: -3px
         left: 0
         bottom: 3px
         right: 0
         background: radial-gradient(50% 100% at 50% 0%, #62DBA8 0%, #097D4C 100%)
         border-radius: 56px
         z-index: -1
+        transition: top .1s ease-in, bottom 0.1s ease-in
+    &:hover
+        & span
+            transform: translateY(3px)
+        &:before
+            top: 0px
+            bottom: 0

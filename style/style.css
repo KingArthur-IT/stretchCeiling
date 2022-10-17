@@ -77,23 +77,42 @@ ul {
   position: relative;
   background: #0B6741;
   border-radius: 48px;
+  z-index: 0;
+}
+
+.primary-btn span {
   color: #fff;
   font-family: 'Colus';
   font-size: 32px;
   line-height: 1.25;
-  z-index: 0;
+  -webkit-transition: -webkit-transform .1s ease-in;
+  transition: -webkit-transform .1s ease-in;
+  transition: transform .1s ease-in;
+  transition: transform .1s ease-in, -webkit-transform .1s ease-in;
 }
 
 .primary-btn::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
   bottom: 3px;
   right: 0;
   background: radial-gradient(50% 100% at 50% 0%, #62DBA8 0%, #097D4C 100%);
   border-radius: 56px;
   z-index: -1;
+  -webkit-transition: top .1s ease-in, bottom 0.1s ease-in;
+  transition: top .1s ease-in, bottom 0.1s ease-in;
+}
+
+.primary-btn:hover span {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.primary-btn:hover:before {
+  top: 0px;
+  bottom: 0;
 }
 
 .header {
@@ -146,6 +165,12 @@ ul {
       flex-basis: 20%;
   text-align: right;
   text-decoration: none;
+  -webkit-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+}
+
+.header__tel:hover {
+  color: #03A762;
 }
 
 .header__menu {
@@ -258,7 +283,7 @@ ul {
 }
 
 .head__order {
-  padding: 11px 36px;
+  padding: 9px 36px;
   margin-right: 28px;
 }
 
@@ -285,6 +310,15 @@ ul {
   border-radius: 56px;
   z-index: -1;
   border-radius: 36px;
+  -webkit-transition: top .1s ease-in, left .1s ease-in, right .1s ease-in, bottom .1s ease-in;
+  transition: top .1s ease-in, left .1s ease-in, right .1s ease-in, bottom .1s ease-in;
+}
+
+.head__consult:hover::before {
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
 }
 
 .features {
@@ -843,6 +877,18 @@ ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.resume__next-wrap svg {
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
+}
+
+.resume__next-wrap:hover svg {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 .resume__next {

@@ -45,7 +45,7 @@
         display: flex
         align-items: center
     &__order
-        padding: 11px 36px
+        padding: 9px 36px
         margin-right: 28px
     &__consult
         position: relative
@@ -68,3 +68,9 @@
             border-radius: 56px
             z-index: -1
             border-radius: 36px
+            transition: top .1s ease-in, left .1s ease-in, right .1s ease-in, bottom .1s ease-in
+        &:hover::before
+            top: 0px
+            left: 0px
+            bottom: 0px
+            right: 0px
