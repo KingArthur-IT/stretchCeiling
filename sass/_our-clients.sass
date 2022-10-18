@@ -33,6 +33,9 @@
         justify-content: space-between
         width: calc(100% + 40px)
         transform: translateX(-20px)
+        max-width: 1240px
+        margin: auto
+        padding: 0 35px
         margin-bottom: 48px
     &__item-wrap
         padding: 0 20px
@@ -76,4 +79,22 @@
 
 @media screen and (max-width: 1024px)
     .our-clients
-        
+        &__list
+            padding: 0
+            width: 100%
+            transform: translateX(0)
+
+@media screen and (max-width: 600px)
+    .our-clients
+        &__item-wrap
+            padding: 0 10px
+        &__item
+            & svg
+                width: 150px
+
+@media screen and (max-width: 425px)
+    .our-clients
+        &__item
+            & svg
+                width: 100px
+                height: 20px

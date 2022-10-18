@@ -1007,6 +1007,9 @@ ul {
   width: calc(100% + 40px);
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 35px;
   margin-bottom: 48px;
 }
 
@@ -1068,6 +1071,31 @@ ul {
   left: 0;
   width: 97%;
   background: #03A762;
+}
+
+@media screen and (max-width: 1024px) {
+  .our-clients__list {
+    padding: 0;
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .our-clients__item-wrap {
+    padding: 0 10px;
+  }
+  .our-clients__item svg {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .our-clients__item svg {
+    width: 100px;
+    height: 20px;
+  }
 }
 
 .resume {
