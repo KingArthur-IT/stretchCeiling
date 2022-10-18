@@ -25,7 +25,7 @@ function startClientsCarousel(){
     autoplayTimeout: 2000,
     autoplaySpeed: 2000,
     nav: false,
-    dots: true,
+    dots: false,
     center: true,
     responsive:{
       0:{
