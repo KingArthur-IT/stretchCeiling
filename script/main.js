@@ -45,4 +45,14 @@ function stopClientsCarousel(className) {
     const owl = $(`.${className}`);
     owl.trigger('destroy.owl.carousel');
     owl.addClass('off');
-  }
+}
+
+
+//menu
+document.querySelector('.header__burger')?.addEventListener('click', () => {
+  document.querySelector('.menu')?.classList.add('opened');
+});
+
+document.querySelector('.menu__close')?.addEventListener('click', () => {
+  document.querySelector('.menu')?.classList.remove('opened');
+})
