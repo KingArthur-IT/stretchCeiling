@@ -53,26 +53,27 @@
         align-items: center
         cursor: pointer
         & label
+            position: relative
             font-size: 24px
             line-height: 130%
             cursor: pointer
-        & input[type="radio"]
-            position: relative
-            margin-right: 19px
+            padding-left: 30px
             &::before
                 content: ""
                 position: absolute
-                top: 0
+                top: 50%
                 left: 0
                 width: 12px
                 height: 12px
+                transform: translateY(-50%)
                 background: #FFFFFF
                 border: 1px solid $primary
                 border-radius: 50%
                 cursor: pointer
-        & input[type="radio"]:checked
-            &::before
-                background: $primary
+        & input[type="radio"]
+            display: none
+        & input[type="radio"]:checked ~ label::before
+            background: $primary
     &__next-wrap
         display: flex
         align-items: center
