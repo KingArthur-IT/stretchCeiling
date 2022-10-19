@@ -521,6 +521,7 @@ ul {
 }
 
 .features__list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,6 +534,7 @@ ul {
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
   margin-bottom: 40px;
+  z-index: 2;
 }
 
 .features__item-wrap {
@@ -694,6 +696,7 @@ ul {
 }
 
 .advantages__list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -708,6 +711,7 @@ ul {
   width: calc(100% + 40px);
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
+  z-index: 2;
 }
 
 .advantages__item-wrap {
