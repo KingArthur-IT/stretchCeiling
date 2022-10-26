@@ -20,6 +20,24 @@
     &__btn
         padding: 9px 20px
         font-size: 30px
+        &::after
+            top: 0px
+            bottom: 0px
+            background: radial-gradient(89.12% 118.66% at 50.11% 0%, #B3E2CE 0%, #5F9A81 100%)
+            transition: background .3s ease-in-out
+        &::before
+            transition: opacity .3s ease-in-out
+            background: rgba(77, 121, 103, 0.6)
+            filter: blur(10px)
+            bottom: -20px
+            top: 20px
+            opacity: 0
+        &:hover
+            &::before
+                opacity: 1
+        &::active
+            &::after
+                background: radial-gradient(89.12% 118.66% at 50.11% 0%, #97BEAD 0%, #3E6253 100%)
     &__mobile-btn
         padding: 9px 20px
         font-size: 30px

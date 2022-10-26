@@ -26,7 +26,7 @@
         font-size: 24px
         line-height: 1
         color: #FFFFFF
-        flex-basis: 25%
+        flex-basis: 22%
         text-align: right
         text-decoration: none
         transition: color .1s ease-in
@@ -35,25 +35,70 @@
     &__menu
         display: flex
         flex-wrap: wrap
-        flex-basis: 40%
+        flex-basis: 50%
         justify-content: center
         align-items: center
     &__menu-item
         font-size: 24px
-        line-height: 130%
+        line-height: 120%
         color: #FFFFFF
-        padding: 0 7.5px
+        padding: 5px 20px 0
         cursor: pointer
         display: flex
         align-items: center
+        margin-top: 16px
         & svg
             margin-right: 9px
+        &:nth-child(1)
+            margin-top: 0
+        &:nth-child(2)
+            margin-top: 0
+    &__collapsed-wrapper
+        position: relative
+        transition: color .3s ease-in-out, background .1s ease-in-out
+        & svg
+            transition: transform .3s ease-in-out
+        &:hover
+            background: #fff
+            color: #001804
+            & svg
+                transform: rotate(180deg)
+            & .header__full-list
+                opacity: 1
+                transform: translateY(0)
+                pointer-events: all
+    &__collapsed-item
+        display: flex
+        align-items: center
+    &__full-list
+        position: absolute
+        background: #fff
+        top: 32px
+        left: 0
+        right: 0
+        padding: 10px
+        z-index: 10
+        transform: translateY(-10px)
+        opacity: 0
+        pointer-events: none
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out
+    &__full-item
+        color: #001804
+        text-align: center
+        margin-bottom: 8px
+        &:hover
+            & span
+                border-bottom: 1px solid #001804
+        &:active
+            color: #686868
+            & span
+                border-bottom: 1px solid #686868
     &__burger
         display: none
         cursor: pointer
         width: 32px
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1240px)
     .header
         &__burger
             display: block

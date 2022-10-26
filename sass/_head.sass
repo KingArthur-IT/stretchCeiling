@@ -54,6 +54,8 @@
         font-size: 18px
         padding: 18px 31px
         z-index: 0
+        border: 1px solid transparent
+        transition: border .1s ease-in
         &::before
             content: ""
             position: absolute
@@ -66,12 +68,17 @@
             border-radius: 56px
             z-index: -1
             border-radius: 36px
-            transition: top .1s ease-in, left .1s ease-in, right .1s ease-in, bottom .1s ease-in
-        &:hover::before
-            top: 0px
-            left: 0px
-            bottom: 0px
-            right: 0px
+            transition: border .1s ease-in
+        &:hover
+            border: 1px solid #fff
+            &::before
+                border: 1px solid transparent
+        &:active
+            border: 1px solid transparent
+            &::before
+                border: 1px solid transparent
+                background: rgba(162, 162, 162, 0.4)
+            
 
 @media screen and (max-width: 1024px)
     .head
