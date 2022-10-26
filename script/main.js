@@ -1,7 +1,9 @@
 const clientCarouselClass = 'our-clients__list';
+const resumeCarouselClass = 'resume__form-wrapper';
 
 $(document).ready(function(){
   carouselSetup();
+  startFormCarousel();
 });
 
 $(window).resize(function() {
@@ -11,6 +13,7 @@ $(window).resize(function() {
 function carouselSetup(){
   if ( $(window).width() < 1024 ) {
     startClientsCarousel();
+    $(`.${clientCarouselClass}`).removeClass('off');
   } else {
     $(`.${clientCarouselClass}`).addClass('off');
     $(`.${clientCarouselClass}`).removeClass('owl-carousel');
@@ -38,6 +41,27 @@ function startClientsCarousel(){
         items: 3.3,
       },
     }
+  });
+};
+function startFormCarousel(){
+  const resumeCarousel = $(`.${resumeCarouselClass}`).owlCarousel({
+    loop: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 2000,
+    autoplaySpeed: 2000,
+    nav: false,
+    dots: false,
+    center: true,
+    items: 1,
+    mouseDrag: false,
+    touchDrag: false
+  });
+
+  $('.resume__next').click(function() {
+    resumeCarousel.trigger('next.owl.carousel');
+  });
+  $('.resume__prev').click(function() {
+    resumeCarousel.trigger('prev.owl.carousel');
   });
 };
 

@@ -36,6 +36,9 @@
         box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1)
         border-radius: 10px
         padding: 32px 75px 25px
+        min-height: 400px
+        display: flex
+        flex-direction: column
     &__form-question
         font-weight: 700
         font-size: 32px
@@ -74,7 +77,14 @@
             display: none
         & input[type="radio"]:checked ~ label::before
             background: $primary
-    &__next-wrap
+    &__second-form-radio
+        flex-basis: 100%
+    &__controls
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: auto
+    &__control-wrap
         display: flex
         align-items: center
         justify-content: flex-end
@@ -82,11 +92,36 @@
             transition: transform 0.1s ease-in
         &:hover svg
             transform: translateX(5px)
-    &__next
+    &__control
         font-weight: 700
-        margin-right: 10px
         color: $primary
         cursor: pointer
+    &__next .resume__control
+        margin-right: 10px
+    &__prev .resume__control
+        margin-left: 10px
+    &__square
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: auto
+        margin-bottom: auto
+    &__input
+        background: #ECECEC
+        border-radius: 96px
+        border: none
+        font-size: 24px
+        padding: 23px 20px
+        outline-color: $primary
+        min-width: 390px
+    &__square-text
+        margin-left: 26px
+        font-size: 24px
+        color: $primary
+        font-weight: 700
+
+.ml-auto
+    margin-left: auto
     
 @media screen and (max-width: 1024px)
     .resume
