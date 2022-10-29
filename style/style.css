@@ -179,6 +179,9 @@ ul {
   .primary-btn span {
     font-size: 22px;
   }
+  .section {
+    padding: 40px 0;
+  }
 }
 
 .header {
@@ -1080,6 +1083,7 @@ ul {
 .our-clients {
   background-color: #292929;
   overflow: hidden;
+  padding-bottom: 0;
 }
 
 .our-clients__top-design {
@@ -1102,8 +1106,38 @@ ul {
   z-index: 0;
   width: 250px;
   height: 163px;
-  top: 65%;
-  left: 10%;
+  top: 40%;
+  left: 0%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.4)), to(rgba(17, 142, 90, 0.4)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  -webkit-transform: rotate(19.49deg);
+          transform: rotate(19.49deg);
+}
+
+.our-clients__center-design {
+  position: absolute;
+  z-index: 0;
+  width: 250px;
+  height: 163px;
+  bottom: 30%;
+  right: 20%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.4)), to(rgba(17, 142, 90, 0.4)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  -webkit-transform: rotate(19.49deg);
+          transform: rotate(19.49deg);
+}
+
+.our-clients__bottom-design {
+  position: absolute;
+  z-index: 0;
+  width: 250px;
+  height: 163px;
+  bottom: 0%;
+  right: 0%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.4)), to(rgba(17, 142, 90, 0.4)));
   background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%);
   -webkit-filter: blur(51.5px);
@@ -1131,8 +1165,6 @@ ul {
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
   max-width: 1240px;
-  margin: auto;
-  padding: 0 35px;
   margin-bottom: 48px;
 }
 
@@ -1166,6 +1198,7 @@ ul {
 .our-clients__marks {
   max-width: 473px;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .our-clients__mark {
@@ -1196,12 +1229,63 @@ ul {
   background: #03A762;
 }
 
+.more-works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 40px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.more-works__item {
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+  width: 33.3%;
+  padding: 0 20px 40px;
+}
+
+.more-works__item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 1024px) {
   .our-clients__list {
-    padding: 0;
-    width: 100%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    width: calc(100% + 20px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .our-clients__item-wrap {
+    padding: 0 10px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-clients {
+    padding-bottom: 20px;
+  }
+  .more-works {
+    width: calc(100% + 20px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  .more-works__item {
+    padding: 0 10px 20px;
   }
 }
 
@@ -1212,12 +1296,31 @@ ul {
   .our-clients__item svg {
     width: 150px;
   }
+  .more-works__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .our-clients__item svg {
     width: 100px;
     height: 20px;
+  }
+  .our-clients__marks {
+    margin-bottom: 60px;
+  }
+  .our-clients__list {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .more-works__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -1905,18 +2008,37 @@ ul {
 }
 
 @media screen and (max-width: 550px) {
-  .day-plan__item {
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+  .day-plan {
+    padding: 40px 20px;
   }
   .day-plan__text {
     margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .day-plan__num {
+    font-size: 40px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .day-plan__num {
     font-size: 30px;
+  }
+  .day-plan__hero {
+    padding: 20px 0px;
+  }
+  .day-plan__item:last-child {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .day-plan {
+    padding: 30px 10px;
+  }
+  .day-plan__text {
+    font-size: 14px;
   }
 }
 

@@ -72,12 +72,24 @@
 
 @media screen and (max-width: 550px)
     .day-plan
-        &__item
-            flex-basis: 70%
+        padding: 40px 20px
         &__text
             margin-bottom: 5px
+            font-size: 16px
+        &__num
+            font-size: 40px
 
 @media screen and (max-width: 425px)
     .day-plan
         &__num
             font-size: 30px
+        &__hero
+            padding: 20px 0px
+        &__item:last-child
+            flex-basis: 80%
+
+@media screen and (max-width: 375px)
+    .day-plan
+        padding: 30px 10px
+        &__text
+            font-size: 14px

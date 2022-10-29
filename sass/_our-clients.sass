@@ -1,6 +1,7 @@
 .our-clients
     background-color: $dark-bg
     overflow: hidden
+    padding-bottom: 0
     &__top-design
         position: absolute
         z-index: 0
@@ -16,8 +17,28 @@
         z-index: 0
         width: 250px
         height: 163px
-        top: 65%
-        left: 10%
+        top: 40%
+        left: 0%
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%)
+        filter: blur(51.5px)
+        transform: rotate(19.49deg)
+    &__center-design
+        position: absolute
+        z-index: 0
+        width: 250px
+        height: 163px
+        bottom: 30%
+        right: 20%
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%)
+        filter: blur(51.5px)
+        transform: rotate(19.49deg)
+    &__bottom-design
+        position: absolute
+        z-index: 0
+        width: 250px
+        height: 163px
+        bottom: 0%
+        right: 0%
         background: linear-gradient(180deg, rgba(44, 188, 128, 0.4) 0%, rgba(17, 142, 90, 0.4) 100%)
         filter: blur(51.5px)
         transform: rotate(19.49deg)
@@ -34,8 +55,6 @@
         width: calc(100% + 40px)
         transform: translateX(-20px)
         max-width: 1240px
-        margin: auto
-        padding: 0 35px
         margin-bottom: 48px
     &__item-wrap
         padding: 0 20px
@@ -56,6 +75,7 @@
     &__marks
         max-width: 473px
         margin: auto
+        margin-bottom: 100px
     &__mark
         margin-bottom: 16px
     &__mark-category
@@ -77,12 +97,41 @@
             width: 97%
             background: $primary
 
+.more-works
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    width: calc(100% + 40px)
+    transform: translateX(-20px)
+    &__item
+        flex-basis: 33.3%
+        width: 33.3%
+        padding: 0 20px 40px
+        & img
+            border-radius: 10px
+            width: 100%
+            height: 100%
+
 @media screen and (max-width: 1024px)
     .our-clients
         &__list
-            padding: 0
-            width: 100%
-            transform: translateX(0)
+            width: calc(100% + 20px)
+            transform: translateX(-10px)
+            flex-wrap: wrap
+        &__item-wrap
+            padding: 0 10px
+            flex-basis: 50%
+            margin-bottom: 20px
+            
+@media screen and (max-width: 768px)
+    .our-clients
+        padding-bottom: 20px
+    .more-works
+        width: calc(100% + 20px)
+        transform: translateX(-10px)
+        &__item
+            padding: 0 10px 20px
 
 @media screen and (max-width: 600px)
     .our-clients
@@ -91,6 +140,10 @@
         &__item
             & svg
                 width: 150px
+    .more-works
+        &__item
+            flex-basis: 50%
+            width: 50%
 
 @media screen and (max-width: 425px)
     .our-clients
@@ -98,3 +151,12 @@
             & svg
                 width: 100px
                 height: 20px
+        &__marks
+            margin-bottom: 60px
+        &__list
+            margin-bottom: 20px
+@media screen and (max-width: 360px)
+    .more-works
+        &__item
+            flex-basis: 100%
+            width: 100%
