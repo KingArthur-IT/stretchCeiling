@@ -709,7 +709,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1075px) {
   .footer__text-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2341,9 +2341,63 @@ ul {
 
 .services {
   background: #F3F3F3;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 0;
+}
+
+.services__top-design {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%) rotate(53.6deg);
+          transform: translate(-50%, -50%) rotate(53.6deg);
+  width: 250px;
+  height: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.3)), to(rgba(17, 142, 90, 0.3)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  z-index: 0;
+}
+
+.services__bottom-design {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%) rotate(53.6deg);
+          transform: translate(-50%, -50%) rotate(53.6deg);
+  width: 250px;
+  height: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.3)), to(rgba(17, 142, 90, 0.3)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  z-index: 0;
+}
+
+.services__right-design {
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  -webkit-transform: translate(-50%, -50%) rotate(53.6deg);
+          transform: translate(-50%, -50%) rotate(53.6deg);
+  width: 250px;
+  height: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 188, 128, 0.3)), to(rgba(17, 142, 90, 0.3)));
+  background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%);
+  -webkit-filter: blur(51.5px);
+          filter: blur(51.5px);
+  z-index: 0;
+}
+
+.services__title {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .services__list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2361,15 +2415,11 @@ ul {
   position: relative;
 }
 
-.services__item-wrap:nth-child(3) {
-  margin-top: -60px;
-}
-
-.services__item-wrap:nth-child(5) {
-  margin-top: -60px;
-}
-
 .services__item-wrap:nth-child(6) {
+  margin-top: -60px;
+}
+
+.services__item-wrap:nth-child(8) {
   margin-top: -60px;
 }
 
@@ -2398,7 +2448,6 @@ ul {
 
 .services__question {
   height: 100%;
-  padding-top: 20px;
 }
 
 .services__man {
@@ -2410,13 +2459,73 @@ ul {
 .services__cloud {
   background: url("../assets/services/cloud.png") no-repeat;
   text-align: center;
-  background-size: contain;
-  padding: 115px 50px;
+  background-size: 100% 100%;
   width: 90%;
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(-30px, -30px);
+          transform: translate(-30px, -30px);
 }
 
 .services__cloud p a {
   color: #3397B7;
+}
+
+@media screen and (max-width: 860px) {
+  .services__list {
+    width: 100%;
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+  .services__item-wrap {
+    padding: 0 0px 40px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .services__item-wrap:nth-child(6) {
+    margin-top: 0px;
+  }
+  .services__item-wrap:nth-child(8) {
+    margin-top: 0px;
+  }
+  .services__question {
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .services__cloud {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .services__item-wrap {
+    padding: 0 0px 30px;
+  }
+  .services__cloud {
+    height: 200px;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .services__cloud {
+    height: 180px;
+  }
+  .services__cloud h3 {
+    font-size: 14px;
+  }
+  .services__cloud p {
+    font-size: 14px;
+  }
 }

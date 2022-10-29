@@ -1,6 +1,43 @@
 .services
     background: $light-bg
+    position: relative
+    overflow-x: hidden
+    padding-bottom: 0
+    &__top-design
+        position: absolute
+        top: 10%
+        left: 0
+        transform: translate(-50%, -50%) rotate(53.6deg)
+        width: 250px
+        height: 150px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        z-index: 0
+    &__bottom-design
+        position: absolute
+        bottom: 10%
+        left: 0
+        transform: translate(-50%, -50%) rotate(53.6deg)
+        width: 250px
+        height: 150px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        z-index: 0
+    &__right-design
+        position: absolute
+        top: 50%
+        right: -20%
+        transform: translate(-50%, -50%) rotate(53.6deg)
+        width: 250px
+        height: 150px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        z-index: 0
+    &__title
+        margin-bottom: 30px
+        text-align: center
     &__list
+        position: relative
         display: flex
         flex-wrap: wrap
         width: calc(100% + 40px)
@@ -9,11 +46,9 @@
         padding: 0 20px 40px
         flex-basis: 50%
         position: relative
-        &:nth-child(3)
-            margin-top: -60px
-        &:nth-child(5)
-            margin-top: -60px
         &:nth-child(6)
+            margin-top: -60px
+        &:nth-child(8)
             margin-top: -60px
     &__item
         background: #fff
@@ -31,7 +66,6 @@
         margin: auto
     &__question
         height: 100%
-        padding-top: 20px
     &__man
         position: absolute
         bottom: 40px
@@ -39,9 +73,50 @@
     &__cloud
         background: url('../assets/services/cloud.png') no-repeat
         text-align: center
-        background-size: contain
-        padding: 115px 50px
+        background-size: 100% 100%
         width: 90%
-        transform: translateX(-30px)
+        height: 270px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        transform: translate(-30px, -30px)
         & p a
             color: #3397B7
+
+@media screen and (max-width: 860px)
+    .services
+        &__list
+            width: 100%
+            transform: translate(0px, 0)
+        &__item-wrap
+            padding: 0 0px 40px
+            flex-basis: 100%
+            &:nth-child(6)
+                margin-top: 0px
+            &:nth-child(8)
+                margin-top: 0px
+        &__question
+            padding-bottom: 200px
+
+@media screen and (max-width: 475px)
+    .services
+        &__cloud
+            height: 220px
+
+@media screen and (max-width: 425px)
+    .services
+        &__item-wrap
+            padding: 0 0px 30px
+        &__cloud
+            height: 200px
+            width: 85%
+
+@media screen and (max-width: 375px)
+    .services
+        &__cloud
+            height: 180px
+        &__cloud
+            & h3
+                font-size: 14px
+            & p
+                font-size: 14px
