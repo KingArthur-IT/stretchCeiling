@@ -1,0 +1,47 @@
+.services
+    background: $light-bg
+    &__list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        transform: translateX(-20px)
+    &__item-wrap
+        padding: 0 20px 40px
+        flex-basis: 50%
+        position: relative
+        &:nth-child(3)
+            margin-top: -60px
+        &:nth-child(5)
+            margin-top: -60px
+        &:nth-child(6)
+            margin-top: -60px
+    &__item
+        background: #fff
+        padding: 32px 19px
+        text-align: center
+        color: #001804
+        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1)
+        border-radius: 10px
+        & h3
+            margin-bottom: 16px
+        & p
+            margin-bottom: 16px
+    &__btn
+        padding: 15px 30px
+        margin: auto
+    &__question
+        height: 100%
+        padding-top: 20px
+    &__man
+        position: absolute
+        bottom: 40px
+        right: 0
+    &__cloud
+        background: url('../assets/services/cloud.png') no-repeat
+        text-align: center
+        background-size: contain
+        padding: 115px 50px
+        width: 90%
+        transform: translateX(-30px)
+        & p a
+            color: #3397B7
