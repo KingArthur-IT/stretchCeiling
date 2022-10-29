@@ -160,10 +160,13 @@
             background: $primary
         & input
             display: none
+    &__contact-hero
+        margin: auto
     &__contact-wrapper
         margin: auto
         margin-bottom: 16px
         position: relative
+        width: fit-content
         &::first-child
             margin-bottom: 32px
         & svg
@@ -183,6 +186,7 @@
         line-height: 130%
         color: #BDBDBD
         margin-bottom: 36px
+        width: fit-content
         & label
             display: flex
             align-items: center
@@ -248,18 +252,34 @@
             margin-bottom: 22px
             &:nth-child(odd)
                 padding-left: 15%
+        &__second-form-radio
+            flex-basis: 100%
+            &:nth-child(odd)
+                padding-left: 0
+        &__form-question
+            width: 100%
 
 @media screen and (max-width: 525px)
     .resume
         &__input
             min-width: 0
             width: 100%
+            padding: 20px 20px 15px
+            font-size: 20px
 
 @media screen and (max-width: 500px)
     .resume
         &__form-radio
             &:nth-child(odd)
                 padding-left: 5%
+        &__second-form-radio
+            &:nth-child(odd)
+                padding-left: 0
+        &__contact-wrapper
+            width: 100%
+            margin-top: 0
+        &__personal-data-wrap
+            font-size: 10px
                 
 
 @media screen and (max-width: 425px)
@@ -278,6 +298,38 @@
         &__form-question
             font-size: 22px
             margin-bottom: 22px
+        &__consult-wrapper
+            margin-top: auto
+        &__control
+            font-size: 14px
+        &__send-btn
+            font-size: 12px
+
+@media screen and (max-width: 375px)
+    .resume
+        &__personal-data-wrap
+            font-size: 8px
+        &__form-question
+            font-size: 16px
+            margin-bottom: 22px
+        &__input
+            padding: 18px 20px 14px
+            font-size: 16px
+            width: 100%
+            &::placeholder
+                font-size: 10px
+        &__square-text
+            margin-left: 10px
+            font-size: 18px
+        &__consult-wrapper
+            width: 100%
+        &__contact-wrapper
+            & svg
+                left: 28px
+                width: 12px
+                height: 12px
+            & input
+                padding-left: 50px
 
 @media screen and (max-width: 350px)
     .resume

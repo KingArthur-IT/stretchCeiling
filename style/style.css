@@ -1526,10 +1526,17 @@ ul {
   display: none;
 }
 
+.resume__contact-hero {
+  margin: auto;
+}
+
 .resume__contact-wrapper {
   margin: auto;
   margin-bottom: 16px;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .resume__contact-wrapper::first-child {
@@ -1559,6 +1566,9 @@ ul {
   line-height: 130%;
   color: #BDBDBD;
   margin-bottom: 36px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .resume__personal-data-wrap label {
@@ -1661,18 +1671,40 @@ ul {
   .resume__form-radio:nth-child(odd) {
     padding-left: 15%;
   }
+  .resume__second-form-radio {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .resume__second-form-radio:nth-child(odd) {
+    padding-left: 0;
+  }
+  .resume__form-question {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 525px) {
   .resume__input {
     min-width: 0;
     width: 100%;
+    padding: 20px 20px 15px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .resume__form-radio:nth-child(odd) {
     padding-left: 5%;
+  }
+  .resume__second-form-radio:nth-child(odd) {
+    padding-left: 0;
+  }
+  .resume__contact-wrapper {
+    width: 100%;
+    margin-top: 0;
+  }
+  .resume__personal-data-wrap {
+    font-size: 10px;
   }
 }
 
@@ -1696,6 +1728,57 @@ ul {
   .resume__form-question {
     font-size: 22px;
     margin-bottom: 22px;
+  }
+  .resume__consult-wrapper {
+    margin-top: auto;
+  }
+  .resume__control {
+    font-size: 14px;
+  }
+  .resume__send-btn {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .resume__personal-data-wrap {
+    font-size: 8px;
+  }
+  .resume__form-question {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .resume__input {
+    padding: 18px 20px 14px;
+    font-size: 16px;
+    width: 100%;
+  }
+  .resume__input::-webkit-input-placeholder {
+    font-size: 10px;
+  }
+  .resume__input:-ms-input-placeholder {
+    font-size: 10px;
+  }
+  .resume__input::-ms-input-placeholder {
+    font-size: 10px;
+  }
+  .resume__input::placeholder {
+    font-size: 10px;
+  }
+  .resume__square-text {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .resume__consult-wrapper {
+    width: 100%;
+  }
+  .resume__contact-wrapper svg {
+    left: 28px;
+    width: 12px;
+    height: 12px;
+  }
+  .resume__contact-wrapper input {
+    padding-left: 50px;
   }
 }
 
