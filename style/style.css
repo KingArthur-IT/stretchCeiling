@@ -452,6 +452,12 @@ ul {
 .head__title span {
   font-family: 'Colus';
   color: #03A762;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #adf8d3), color-stop(40%, #03A762));
+  background: linear-gradient(180deg, #adf8d3 1%, #03A762 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .head__text {
