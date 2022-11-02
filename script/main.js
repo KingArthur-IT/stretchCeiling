@@ -1,4 +1,3 @@
-const clientCarouselClass = 'our-clients__carousel';
 const resumeCarouselClass = 'resume__form-wrapper';
 
 $(document).ready(function(){

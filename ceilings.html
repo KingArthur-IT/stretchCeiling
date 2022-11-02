@@ -198,6 +198,93 @@
                 <button class="btn primary-btn ceiling-tech__btn"><span>Получить консультацию</span></button>
             </div>
         </section>
+        <section class="section ceiling-types">
+            <div class="ceiling-types__top-design"></div>
+            <h2 class="container title ceiling-types__title">Виды натяжных потолков </h2>
+            <div class="ceiling-types__carousel owl-carousel">
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/1.jpg" alt="Матовые">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Матовые</strong></p>
+                        <p class="text ceiling-types__text">Мягко рассеивает свет</p>
+                        <p class="text ceiling-types__text">Самая практичная фактура</p>
+                        <p class="text ceiling-types__text">Напоминает классический оштукатуренный потолок</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/2.jpg" alt="Лаковые">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Лаковые</strong></p>
+                        <p class="text ceiling-types__text">Отражает свет и обстановку комнаты</p>
+                        <p class="text ceiling-types__text">Делают комнату светлее и выше</p>
+                        <p class="text ceiling-types__text">Подходит к интерьерам в современном стиле</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/3.jpg" alt="Сатиновые">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Сатиновые</strong></p>
+                        <p class="text ceiling-types__text">Компромисс между глянцевой и матовой поверхностью</p>
+                        <p class="text ceiling-types__text">Оттенок может меняться в зависимости от освещения</p>
+                        <p class="text ceiling-types__text">Водонепроницаем</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/4.jpg" alt="С фотопечатью">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>С фотопечатью</strong></p>
+                        <p class="text ceiling-types__text">Можно распечатать любое изображение</p>
+                        <p class="text ceiling-types__text">Индивидуальный дизайн</p>
+                        <p class="text ceiling-types__text">Печать на любом материале</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/5.jpg" alt="Многоуровневые">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Многоуровневые</strong></p>
+                        <p class="text ceiling-types__text">Зонирование</p>
+                        <p class="text ceiling-types__text">Скрывают дефекты помещения</p>
+                        <p class="text ceiling-types__text">Любой цвет и дизайн</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/6.jpg" alt="Черные ниши">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Черные ниши</strong></p>
+                        <p class="text ceiling-types__text">Визуально приподнимают потолок</p>
+                        <p class="text ceiling-types__text">Зонирование помещения</p>
+                        <p class="text ceiling-types__text">Минималистичная деталь, которая сделает дизайн интереснее</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/7.jpg" alt="Парящие линии">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Парящие линии</strong></p>
+                        <p class="text ceiling-types__text">Оригинальное освещение</p>
+                        <p class="text ceiling-types__text">Любой цвет</p>
+                        <p class="text ceiling-types__text">Бюджетный потолок, который выглядит дорого</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/8.jpg" alt="Воздушные">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Воздушные</strong></p>
+                        <p class="text ceiling-types__text">Визуально приподнимают потолок</p>
+                        <p class="text ceiling-types__text">Создают атмосферу</p>
+                        <p class="text ceiling-types__text">Выглядят дорого</p>
+                    </div>
+                </div>
+                <div class="ceiling-types__item">
+                    <img src="./assets/ceiling-types/9.jpg" alt="Звездное небо">
+                    <div class="ceiling-types__description">
+                        <p class="text ceiling-types__text"><strong>Звездное небо</strong></p>
+                        <p class="text ceiling-types__text">Оригинальный дизайн</p>
+                        <p class="text ceiling-types__text">Имитация мерцающих звезд</p>
+                        <p class="text ceiling-types__text">Любые созвездия</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section ceiling-choose">
             <div class="ceiling-choose__top-design"></div>
             <div class="ceiling-choose__center-design"></div>
@@ -512,5 +599,30 @@
     <script src="./script/jquery.slim.js"></script>
     <script src="./script/owl.carousel.min.js"></script>
     <script src="./script/main.js"></script>
+    <script>
+        const resumeCarousel = $(`.ceiling-types__carousel`).owlCarousel({
+            loop: true,
+            slideTransition: 'linear',
+            nav: false,
+            dots: false,
+            center: true,
+            items: 1,
+            stagePadding: 350,
+            responsive:{
+                1240: {
+                    stagePadding: 350,
+                },
+                768: {
+                    stagePadding: 150,
+                },
+                425: {
+                    stagePadding: 50,
+                },
+                0: {
+                    stagePadding: 30,
+                }
+            }
+        });
+    </script>
 </body>
 </html>

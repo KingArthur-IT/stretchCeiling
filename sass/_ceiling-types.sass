@@ -1,0 +1,48 @@
+.ceiling-types
+    background: $dark-bg
+    overflow: hidden
+    &__top-design
+        position: absolute
+        top: -20%
+        right: -10%
+        transform: translate(0%, 0%) rotate(53.6deg)
+        width: 300px
+        height: 400px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        z-index: 0
+    &__title
+        text-align: center
+        margin-bottom: 32px
+        color: #fff
+    &__carousel
+        & .owl-item.center
+            & .ceiling-types__item
+                transform: scale(1)
+                & img
+                    filter: blur(0px)
+            & .ceiling-types__description
+                opacity: 1
+    &__item
+        background: $dark-bg
+        transform: scale(0.9)
+        transition: transform .2s ease-in-out
+        & img
+            margin-bottom: 25px
+            border-radius: 10px
+            filter: blur(5px)
+    &__description
+        background: #fff
+        border-radius: 10px
+        padding: 16px
+        margin: auto
+        width: fit-content
+        opacity: 0
+        transition: opacity .2s ease-in-out
+    &__text
+        text-align: center
+        margin-bottom: 8px
+
+@media screen and (max-width: 1024px)
+    .ceiling-types
+        padding-bottom: 0
