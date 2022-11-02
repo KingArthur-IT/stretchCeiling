@@ -1,0 +1,51 @@
+.ceiling-test
+    background: $dark-bg
+    &__left-design
+        position: absolute
+        top: 35%
+        left: -4%
+        transform: translate(0%, 0%) rotate(53.6deg)
+        width: 220px
+        height: 150px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        z-index: 0
+    &__right-design
+        position: absolute
+        bottom: 13%
+        right: 10%
+        transform: translate(0%, 0%) rotate(53.6deg)
+        width: 225px
+        height: 225px
+        background: linear-gradient(180deg, rgba(44, 188, 128, 0.3) 0%, rgba(17, 142, 90, 0.3) 100%)
+        filter: blur(51.5px)
+        z-index: 0
+    &__title
+        text-align: center
+        color: #fff
+        margin-bottom: 32px
+    &__text
+        color: #fff
+        text-align: center
+        margin: auto
+        margin-bottom: 32px
+        max-width: 690px
+
+@media screen and (max-width: 425px)
+    .ceiling-test
+        &__title
+            margin-bottom: 20px
+        &__text
+            margin-bottom: 20px
+        &__left-design
+            top: 10%
+            left: -4%
+            width: 90px
+            height: 70px
+            filter: blur(15px)
+        &__right-design
+            bottom: 13%
+            right: 10%
+            width: 90px
+            height: 70px
+            filter: blur(15px)
