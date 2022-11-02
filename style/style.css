@@ -2927,15 +2927,15 @@ ul {
 @media screen and (max-width: 860px) {
   .ceiling-tech__item {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .ceiling-tech__item:nth-child(2) {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .ceiling-tech__item:nth-child(2) .ceiling-tech__img-wrap {
     margin-right: 0;
