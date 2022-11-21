@@ -22,15 +22,31 @@
             font-size: 24px
             line-height: 140%
             text-transform: uppercase
+    &__tel-wrap
+        flex-basis: 22%
     &__tel
         font-weight: 400
         font-size: 24px
         line-height: 1
         color: #FFFFFF
-        flex-basis: 22%
         text-align: right
         text-decoration: none
         transition: color .1s ease-in
+        margin-bottom: 18px
+        display: block
+        &:hover
+            color: $primary
+    &__cost
+        font-family: 'Gotham Pro'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 17px
+        color: #3397B7
+        text-decoration: underline
+        text-align: right
+        cursor: pointer
+        transition: color .2s ease-in-out
         &:hover
             color: $primary
     &__menu
@@ -48,6 +64,7 @@
         display: flex
         align-items: center
         margin-top: 16px
+        text-decoration: none
         & svg
             margin-right: 9px
         &:nth-child(1)
@@ -106,7 +123,7 @@
             display: block
         &__menu
             display: none
-        &__tel
+        &__tel-wrap
             display: none
             
 @media screen and (max-width: 768px)

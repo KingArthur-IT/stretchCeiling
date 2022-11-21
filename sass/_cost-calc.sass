@@ -1,0 +1,108 @@
+.cost
+    &__hero
+        position: relative
+        padding: 20px 34px 16px
+    &__square
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 16px
+        padding-left: 45px
+    &__input
+        background: #ECECEC
+        border-radius: 96px
+        border: none
+        font-size: 24px
+        padding: 24px 20px 20px
+        outline-color: $primary
+        width: 150px
+        caret-color: $primary
+        text-align: center
+        font-size: 16px
+    &__square-text
+        margin-left: 15px
+        font-size: 24px
+        color: $primary
+        font-weight: 700
+    &__lights
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 16px
+    &__rezult
+        background: $primary
+        border-radius: 93px
+        color: #fff
+        text-align: center
+        font-family: 'Gotham Pro'
+        font-style: normal
+        font-weight: 700
+        font-size: 32px
+        line-height: 130%
+        padding: 10px 0
+        width: 300px
+        margin: 0 auto
+        margin-bottom: 16px
+    &__line
+        width: 100%
+        height: 1px
+        background-color: #D9D9D9
+        margin-bottom: 16px
+    &__contact-wrapper
+        margin: auto
+        margin-bottom: 16px
+        position: relative
+        width: 100%
+        &::first-child
+            margin-bottom: 20px
+        & svg
+            position: absolute
+            top: 50%
+            left: 28px
+            transform: translateY(-50%)
+        & input
+            padding: 25px 20px 21px 70px
+            &:focus ~ svg path
+                fill: $primary
+    &__contact-input
+        width: 100%
+        text-align: left
+    &__send-btn
+        position: relative
+        color: #fff
+        padding: 9px 14px
+        font-family: 'Colus'
+        font-size: 32px
+        line-height: 1.3
+        background: radial-gradient(100% 100% at 50% 0%, #5DD6A3 0%, #0A7F4E 100%)
+        border-radius: 80px
+        width: 320px
+        margin: 0 auto
+        margin-bottom: 16px
+        &:active
+            background: radial-gradient(100% 100% at 50% 0%, #51B088 0%, #08623C 100%)
+    &__personal-data-wrap
+        position: relative
+        margin: auto
+        font-size: 14px
+        line-height: 130%
+        color: #BDBDBD
+        width: fit-content
+        & label
+            display: flex
+            align-items: center
+            cursor: pointer
+        & svg
+            margin-right: 10px
+            margin-bottom: 2px
+        & a
+            color: #3397B7
+            margin-left: 6px
+        & input
+            display: none
+            &:checked ~ label .checked
+                display: block
+            &:checked ~ label .unchecked
+                display: none
+            &:not(:checked) ~ label .checked
+                display: none
