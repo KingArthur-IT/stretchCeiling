@@ -77,6 +77,7 @@ ul {
           justify-content: center;
   border: none;
   line-height: 120%;
+  text-decoration: none;
 }
 
 .primary-btn {
@@ -3474,7 +3475,7 @@ ul {
   opacity: 1;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .modal__title {
     font-size: 24px;
   }
@@ -3690,4 +3691,25 @@ ul {
 
 .cost__personal-data-wrap input:not(:checked) ~ label .checked {
   display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .cost__hero {
+    padding: 30px 20px 16px;
+    margin: 0 15px;
+  }
+  .cost__rezult {
+    width: 100%;
+    font-size: 24px;
+  }
+  .cost__send-btn {
+    width: 100%;
+    font-size: 24px;
+  }
+  .cost__contact-wrapper svg {
+    left: 22px;
+  }
+  .cost__contact-wrapper input {
+    padding: 25px 20px 21px 50px;
+  }
 }
