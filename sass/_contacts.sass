@@ -1,0 +1,23 @@
+.contacts
+    &__hero
+        position: relative
+        padding: 30px 50px 12px
+    &__socials
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        margin-bottom: 20px
+        & a svg path
+            transition: all .2s ease-in-out
+        & a:hover
+            & svg path
+                fill: $primary
+
+@media screen and (max-width: 375px)
+    .contacts
+        &__hero
+            padding: 35px 30px 18px
+        &__socials
+            margin-bottom: 12px
+        
+        
