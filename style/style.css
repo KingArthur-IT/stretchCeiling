@@ -2154,6 +2154,9 @@ ul {
   .resume__item {
     margin-bottom: 22ox;
   }
+  .resume__form {
+    min-height: 340px;
+  }
   .resume__form-radio {
     margin-bottom: 16px;
   }
