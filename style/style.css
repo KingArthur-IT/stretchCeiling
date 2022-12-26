@@ -253,10 +253,10 @@ ul {
 .header__cost {
   font-family: 'Gotham Pro';
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 22px;
   line-height: 17px;
-  color: #3397B7;
+  color: #03A762;
   text-decoration: underline;
   text-align: right;
   cursor: pointer;
@@ -265,7 +265,7 @@ ul {
 }
 
 .header__cost:hover {
-  color: #03A762;
+  color: #03c071;
 }
 
 .header__menu {
@@ -702,7 +702,6 @@ ul {
 .footer__btn::after {
   top: 0px;
   bottom: 0px;
-  background: radial-gradient(89.12% 118.66% at 50.11% 0%, #B3E2CE 0%, #5F9A81 100%);
   -webkit-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
@@ -1701,6 +1700,26 @@ ul {
   line-height: 130%;
   color: #03A762;
   margin-right: 60px;
+}
+
+.resume__tel {
+  font-weight: 600;
+  line-height: 1;
+  color: #000;
+  text-align: right;
+  text-decoration: none;
+  -webkit-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+  display: inline;
+}
+
+.resume__tel:hover {
+  color: #03A762;
+}
+
+.resume__btn {
+  display: inline;
+  padding: 2px 10px;
 }
 
 .resume__form {
@@ -3714,5 +3733,26 @@ ul {
   }
   .cost__contact-wrapper input {
     padding: 25px 20px 21px 50px;
+  }
+}
+
+.order__hero {
+  padding: 36px 30px 20px;
+  position: relative;
+}
+
+.order__btn {
+  width: 100%;
+}
+
+.order__title {
+  color: #03A762;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 375px) {
+  .order__hero {
+    padding: 36px 20px 20px;
   }
 }
