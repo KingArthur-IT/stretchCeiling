@@ -47,19 +47,21 @@
                     <div class="header__logo-text">натяжные потолки</div>
                 </a>
                 <ul class="header__menu">
-                    <a href="./ceilings.html" class="header__menu-item header__collapsed-wrapper">
+                    <div class="header__menu-item header__collapsed-wrapper">
                         <div class="header__collapsed-item">
-                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.86602 10.5C7.48112 11.1667 6.51887 11.1667 6.13397 10.5L0.937821 1.5C0.55292 0.833334 1.03405 1.22094e-06 1.80385 1.15364e-06L12.1962 2.4512e-07C12.966 1.77822e-07 13.4471 0.833333 13.0622 1.5L7.86602 10.5Z" fill="#03A762"/>
-                            </svg>                            
-                            Потолки
+                            <a href="./ceilings.html" class="header__link">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.86602 10.5C7.48112 11.1667 6.51887 11.1667 6.13397 10.5L0.937821 1.5C0.55292 0.833334 1.03405 1.22094e-06 1.80385 1.15364e-06L12.1962 2.4512e-07C12.966 1.77822e-07 13.4471 0.833333 13.0622 1.5L7.86602 10.5Z" fill="#03A762"/>
+                                </svg>                            
+                                Потолки
+                            </a>
                         </div>
                         <div class="header__full-list">
-                            <div class="header__full-item"><span>Технологии</span></div>
-                            <div class="header__full-item"><span>Виды потолков</span></div>
-                            <div class="header__full-item"><span>Обращаем внимание</span></div>
+                            <a href="./ceilings.html#tech" class="header__link header__full-item"><span>Технологии</span></a>
+                            <a href="./ceilings.html#types" class="header__link header__full-item"><span>Виды потолков</span></a>
+                            <a href="./ceilings.html#choose" class="header__link header__full-item"><span>Обращаем внимание</span></a>
                         </div>
-                    </a>
+                    </div>
                     <li class="header__menu-item header__collapsed-wrapper">
                         <div class="header__collapsed-item">
                             <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,27 +152,38 @@
                 </div>
             </div>
         </div>
-        <section class="section ceiling-tech">
+        <section id="tech" class="section ceiling-tech">
             <div class="ceiling-tech__left-design"></div>
             <div class="ceiling-tech__right-design"></div>
             <div class="container">
                 <h2 class="title ceiling-tech__title">технологии Установки натяжного потолка</h2>
                 <p class="text">
-                    Вам не обязательно знать тонкости работы, чтобы получить идеальный потолок.  Но у нас есть клиенты, которым важно знать детали. Существует <strong>три способа</strong> крепления натяжных потолков, которые зависят от конструкции, а также от вида материала
+                    Вам не обязательно знать тонкости работы, чтобы получить идеальный потолок. 
+                    Но у нас есть клиенты, которым важно знать детали. 
+
+                    Существует <strong>три способа</strong> крепления натяжных потолков, которые зависят от конструкции, а также от вида материала.
                 </p>
                 <ul class="ceiling-tech__list">
-                    <li data-aos="fade-up" data-aos-duration="1000" class="ceiling-tech__item">
-                        <div class="ceiling-tech__img-wrap">
-                            <img src="./assets/ceilling-tech/1.jpg" class="ceiling-tech__img" alt="tech">
+                    <li data-aos="fade-up" data-aos-duration="1000">
+                        <div class="ceiling-tech__item">
+                            <div class="ceiling-tech__img-wrap">
+                                <img src="./assets/ceilling-tech/1.jpg" class="ceiling-tech__img" alt="tech">
+                            </div>
+                            <div class="ceiling-tech__content">
+                                <h3 class="title ceiling-tech__item-title">Гарпунная система крепления</h3>
+                                <ul class="ceiling-tech__content-list">
+                                    <li class="text ceiling-tech__content-item">Самая  распространенная крепежная система</li>
+                                    <li class="text ceiling-tech__content-item">При необходимости  можно вытащить гарпун и устранить неполадки или слить воду после подтопления</li>
+                                    <li class="text ceiling-tech__content-item">Такая система используется только для ПВХ пленки</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="ceiling-tech__content">
-                            <h3 class="title ceiling-tech__item-title">Гарпунная система крепления</h3>
-                            <ul class="ceiling-tech__content-list">
-                                <li class="text ceiling-tech__content-item">Самая  распространенная крепежная система</li>
-                                <li class="text ceiling-tech__content-item">При необходимости  можно вытащить гарпун и устранить неполадки или слить воду после подтопления</li>
-                                <li class="text ceiling-tech__content-item">Такая система используется только для ПВХ пленки</li>
-                            </ul>
-                        </div>
+                        <p class="text">
+                            Это наиболее распространенная крепежная система для установки натяжного потолка, которая используется для натяжки полотен из пленки ПВХ. Специфика данной системы самая незамысловатая: полотно будущего потолка отрезается в нужный размер, а затем по всему его периметру припаивают пластиковую V-образную панель.
+                        </p>
+                        <p class="text" style="margin-bottom: 30px;">
+                            Главное преимущество такой системы в том, что при необходимости гарпун всегда можно вытащить из паза, чтобы устранить возникшие неполадки или слить воду после подтопления.
+                        </p>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="1000" class="ceiling-tech__item">
                         <div class="ceiling-tech__img-wrap">
@@ -179,9 +192,9 @@
                         <div class="ceiling-tech__content">
                             <h3 class="title ceiling-tech__item-title">Клипсовая система крепления</h3>
                             <ul class="ceiling-tech__content-list">
-                                <li class="text ceiling-tech__content-item">Устанавливается по всему периметру комнаты, после чего в ней зажимается полотно – чаще тканевый потолок</li>
-                                <li class="text ceiling-tech__content-item">При необходимости  можно вытащить гарпун и устранить неполадки или слить воду после подтопления</li>
-                                <li class="text ceiling-tech__content-item">Такая система используется только для ПВХ пленки</li>
+                                <li class="text ceiling-tech__content-item">Такая зажимная система устанавливается по всему периметру комнаты, после чего в ней зажимается полотно – чаще тканевый потолок.</li>
+                                <li class="text ceiling-tech__content-item">При этом нет необходимости нагревать ткань, клипса надежно прижимает ее к профилю.</li>
+                                <li class="text ceiling-tech__content-item">Единственный минус: перед завершением работ излишки материала нужно обрезать, чтобы закрыть систему нащельником. А из-за обрезки, снимать и устанавливать натяжной потолок  потолок на место в следующий раз не получится. Эта особенность характерна для всех тканевых потолков.</li>
                             </ul>
                         </div>
                     </li>
@@ -198,10 +211,10 @@
                         </div>
                     </li>
                 </ul>
-                <button class="btn primary-btn ceiling-tech__btn"><span>Получить консультацию</span></button>
+                <button class="btn primary-btn ceiling-tech__btn open-order-modal"><span>Получить консультацию</span></button>
             </div>
         </section>
-        <section class="section ceiling-types">
+        <section id="types" class="section ceiling-types">
             <div class="ceiling-types__top-design"></div>
             <h2 class="container title ceiling-types__title">Виды натяжных потолков </h2>
             <div class="ceiling-types__carousel owl-carousel">
@@ -213,6 +226,7 @@
                         <p class="text ceiling-types__text">Самая практичная фактура</p>
                         <p class="text ceiling-types__text">Напоминает классический оштукатуренный потолок</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/2.jpg" alt="Лаковые">
@@ -222,6 +236,7 @@
                         <p class="text ceiling-types__text">Делают комнату светлее и выше</p>
                         <p class="text ceiling-types__text">Подходит к интерьерам в современном стиле</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/3.jpg" alt="Сатиновые">
@@ -231,6 +246,7 @@
                         <p class="text ceiling-types__text">Оттенок может меняться в зависимости от освещения</p>
                         <p class="text ceiling-types__text">Водонепроницаем</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/4.jpg" alt="С фотопечатью">
@@ -240,6 +256,7 @@
                         <p class="text ceiling-types__text">Индивидуальный дизайн</p>
                         <p class="text ceiling-types__text">Печать на любом материале</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/5.jpg" alt="Многоуровневые">
@@ -249,6 +266,7 @@
                         <p class="text ceiling-types__text">Скрывают дефекты помещения</p>
                         <p class="text ceiling-types__text">Любой цвет и дизайн</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/6.jpg" alt="Черные ниши">
@@ -258,6 +276,7 @@
                         <p class="text ceiling-types__text">Зонирование помещения</p>
                         <p class="text ceiling-types__text">Минималистичная деталь, которая сделает дизайн интереснее</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/7.jpg" alt="Парящие линии">
@@ -267,6 +286,7 @@
                         <p class="text ceiling-types__text">Любой цвет</p>
                         <p class="text ceiling-types__text">Бюджетный потолок, который выглядит дорого</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/8.jpg" alt="Воздушные">
@@ -276,6 +296,7 @@
                         <p class="text ceiling-types__text">Создают атмосферу</p>
                         <p class="text ceiling-types__text">Выглядят дорого</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
                 <div class="ceiling-types__item">
                     <img src="./assets/ceiling-types/9.jpg" alt="Звездное небо">
@@ -285,10 +306,11 @@
                         <p class="text ceiling-types__text">Имитация мерцающих звезд</p>
                         <p class="text ceiling-types__text">Любые созвездия</p>
                     </div>
+                    <a href="#" class="btn primary-btn ceiling-types__btn"><span>Подробнее</span></a>
                 </div>
             </div>
         </section>
-        <section class="section ceiling-choose">
+        <section id="choose" class="section ceiling-choose">
             <div class="ceiling-choose__top-design"></div>
             <div class="ceiling-choose__center-design"></div>
             <div class="ceiling-choose__bottom-design"></div>
@@ -302,16 +324,13 @@
                         <div class="ceiling-choose__content">
                             <h3 class="title ceiling-choose__content-title">Виды полотна</h3>
                             <p class="text ceiling-choose__text">
-                                Полотно для натяжных потолков может быть выполнено из ПВХ-пленки или ткани
+                                Полотно для натяжных потолков может быть выполнено из ПВХ-пленки или ткани.
                             </p>
                             <p class="text ceiling-choose__text">
-                                <strong>Пленочные потолки</strong> дешевле, имеют меньшую прочность и боятся отрицательных температур.
-                                Однако у них есть одно большое преимущество
-                                перед тканевыми — водостойкость
+                                <strong>Пленочные натяжные потолки</strong> дешевле, имеют меньшую прочность и боятся отрицательных температур. Однако у них есть одно большое преимущество перед тканевыми — водостойкость. Многим знакома досадная ситуация, когда только что побеленный потолок расцвечивается желтоватыми разводами из-за соседей сверху, устроивших очередной потоп. Некоторых такое «везение» преследует всю жизнь. Пленочный натяжной потолок не только успешно выдержит вес пролившейся воды, его можно будет натянуть вторично и забыть о недоразумении. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                <strong>Тканевые натяжные</strong> потолки устойчивы
-                                к воздействию холода, их сложно проткнуть острым предметом. При желании ткань можно покрасить акриловой краской.
+                                <strong>Тканевые натяжные потолки</strong> устойчивы к воздействию холода, их сложно проткнуть острым предметом. При желании ткань можно покрасить акриловой краской.
                             </p>
                         </div>
                     </li>
@@ -322,18 +341,19 @@
                         <div class="ceiling-choose__content">
                             <h3 class="title ceiling-choose__content-title">Фактура</h3>
                             <p class="text ceiling-choose__text">
-                                ПВХ-полотна могут иметь матовую, глянцевую или сатиновую поверхность
+                                ПВХ-полотна могут иметь матовую, глянцевую или сатиновую поверхность.
                             </p>
                             <p class="text ceiling-choose__text">
-                                <strong>Матовые потолки</strong> — спокойный классический вариант, подходящий к любым площадям и интерьерам
+                                <strong>Матовые натяжные потолки</strong> — спокойный классический вариант, подходящий к любым площадям и интерьерам. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                <strong>Глянцевый натяжной потолок</strong> выгодно впишется в минималистичный интерьер или интерьер в стиле хай-тек, визуально расширив площадь помещения
+                                <strong>Глянцевый натяжной потолок</strong> выгодно впишется в минималистичный интерьер или интерьер в стиле хай-тек, визуально расширив площадь помещения. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                <strong>Сатиновая фактура</strong> — компромисс между матовой
-                                и глянцевой: отражения в потолке ненавязчивы, размыты, придают интерьеру особую умиротворенность, а свет от люстр — рассеян,
-                                не имеет выраженного рисунка
+                                <strong>Сатиновая фактура</strong> — компромисс между матовой и глянцевой: отражения в потолке ненавязчивы, размыты, придают интерьеру особую умиротворенность, а свет от люстр — рассеян, не имеет выраженного рисунка. Сатиновая фактура подходит для просторных помещений. 
+                            </p>
+                            <p class="text ceiling-choose__text">
+                                <strong>Тканевые полотна</strong> выпускаются только в матовом варианте.
                             </p>
                         </div>
                     </li>
@@ -344,13 +364,13 @@
                         <div class="ceiling-choose__content">
                             <h3 class="title ceiling-choose__content-title">Цветовые решения</h3>
                             <p class="text ceiling-choose__text">
-                                Кипенно-белый или слоновой кости, голубой, розовый или даже черный — вам достаточно просто выбрать цвет
+                                Кипенно-белый или слоновой кости, голубой, розовый или даже черный — вам достаточно просто выбрать цвет. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                При желании в одном потолке можно сочетать несколько расцветок или даже заказать фотопечать
+                                При желании в одном натяжном потолке можно сочетать несколько расцветок или даже заказать фотопечать. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                Пастельные тона обычно выбирают для гостиной и спальни, с более яркими можно поэкспериментировать в детской или на кухне, крупный эффектный рисунок будет интересно смотреться в холле или прихожей, в ванной комнате
+                                Пастельные тона обычно выбирают для гостиной и спальни, с более яркими можно поэкспериментировать в детской или на кухне, крупный эффектный рисунок на натяжном потолке будет интересно смотреться в холле или прихожей, в ванной комнате.
                             </p>
                         </div>
                     </li>
@@ -361,12 +381,10 @@
                         <div class="ceiling-choose__content">
                             <h3 class="title ceiling-choose__content-title">Устройство освещения</h3>
                             <p class="text ceiling-choose__text">
-                                Помимо классики с люстрой по центру, натяжной потолок — это возможность легко установить несколько источников света в разных точках
-                                или даже организовать «парящий» вариант
-                                со светодиодным освещением по периметру
+                                Помимо классики с люстрой по центру, натяжной потолок — это возможность легко установить несколько источников света в разных точках или даже организовать «парящий» вариант со светодиодным освещением по периметру. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                Освещение может быть однотонным или цветным
+                                Освещение может быть однотонным или цветным.
                             </p>
                         </div>
                     </li>
@@ -377,13 +395,13 @@
                         <div class="ceiling-choose__content">
                             <h3 class="title ceiling-choose__content-title">Уровни</h3>
                             <p class="text ceiling-choose__text">
-                                Одноуровневые потолки универсальны и подходят практически любому помещению
+                                Одноуровневые натяжные потолки универсальны и подходят практически любому помещению. 
                             </p>
                             <p class="text ceiling-choose__text">
-                                Для создания эффектного интерьера часто выбирают многоуровневые потолки, которые могут сочетать разные материалы и варианты подсветки. Многоуровневый натяжной потолок может визуально вытянуть или расширить помещение, разделить его на зоны
+                                Для создания эффектного интерьера часто выбирают многоуровневые потолки, которые могут сочетать разные материалы и варианты подсветки. Многоуровневый натяжной потолок может визуально вытянуть или расширить помещение, разделить его на зоны.
                             </p>
                             <p class="text ceiling-choose__text">
-                                Сочетание различных материалов, цветов, фактур, освещения и конструкций позволяет создать уникальный натяжной потолок, который станет «визитной карточкой» вашего дома
+                                Сочетание различных материалов, цветов, фактур, освещения и конструкций позволяет создать уникальный натяжной потолок, который станет «визитной карточкой» вашего дома.
                             </p>
                         </div>
                     </li>
@@ -670,6 +688,42 @@
             </div>
         </div>
     </div>
+    <div class="modal order">
+        <div class="modal__hero order__hero">
+            <svg class="modal__close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.70711" y1="1" x2="15.1421" y2="14.435" stroke="#03A762" stroke-linecap="round"/>
+                <line x1="0.5" y1="-0.5" x2="19.5" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 15.1421 1)" stroke="#03A762" stroke-linecap="round"/>
+            </svg>                
+            <h2 class="modal__title cost__title order__title">Заполните форму</h2>
+            <div class="cost__contact-wrapper">
+                <input type="text" class="cost__input cost__contact-input" placeholder="Ваше имя">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.1786 9.5C10.1429 9.5 9.67857 10 8 10C6.28571 10 5.82142 9.5 4.78571 9.5C2.14286 9.5 0 11.4063 0 13.7188V14.5C0 15.3437 0.750001 16 1.71429 16H14.2857C15.2143 16 16 15.3437 16 14.5V13.7188C16 11.4063 13.8214 9.5 11.1786 9.5ZM14.2857 14.5H1.71429V13.7188C1.71429 12.2187 3.07142 11 4.78571 11C5.32143 11 6.14286 11.5 8 11.5C9.82142 11.5 10.6429 11 11.1786 11C12.8929 11 14.2857 12.2187 14.2857 13.7188V14.5ZM8 9C10.8214 9 13.1429 7 13.1429 4.5C13.1429 2.03125 10.8214 0 8 0C5.14286 0 2.85714 2.03125 2.85714 4.5C2.85714 7 5.14286 9 8 9ZM8 1.5C9.85714 1.5 11.4286 2.875 11.4286 4.5C11.4286 6.15625 9.85714 7.5 8 7.5C6.10714 7.5 4.57143 6.15625 4.57143 4.5C4.57143 2.875 6.10714 1.5 8 1.5Z" fill="#CCCCD8"/>
+                </svg>                                    
+            </div>
+            <div class="cost__contact-wrapper">
+                <input type="text" class="cost__input cost__contact-input" placeholder="Ваш номер телефона" oninput="this.value = this.value.replace(/[^0-9-+]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.16827 0.69484L4.21876 0.0375604C4.93269 -0.118935 5.64663 0.225354 5.90624 0.851338L7.33414 4.04382C7.59376 4.60721 7.43149 5.29578 6.91226 5.70267L5.61419 6.73553C6.52284 8.36308 7.95072 9.70893 9.63822 10.6166L10.7091 9.36464C11.131 8.86386 11.845 8.70736 12.4291 8.95775L15.7392 10.3036C16.3882 10.5853 16.7453 11.2739 16.583 11.9625L15.9015 14.9046C15.7392 15.5618 15.1226 16 14.4411 16C6.49038 16 0 9.80282 0 2.10329C0 1.44601 0.486778 0.851338 1.16827 0.69484ZM14.3762 14.4977L15.0577 11.6808L11.8774 10.3662L10.0601 12.4945C6.84735 11.0235 5.19231 9.42723 3.66707 6.32864L5.8738 4.57591L4.51081 1.5086L1.55769 2.16589C1.59015 8.95775 7.33414 14.4664 14.3762 14.4977Z" fill="#CCCCD8"/>
+                </svg>                                    
+            </div>
+            <button class="btn cost__send-btn order__btn">Отправить</button>
+            <div class="cost__personal-data-wrap">
+                <input checked type="checkbox" id="orderPersonalDataAccepment">
+                <label for="orderPersonalDataAccepment">
+                    <svg class="checked" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7143 0H1.28571C0.5625 0 0 0.589283 0 1.28571V10.7143C0 11.4375 0.5625 12 1.28571 12H10.7143C11.4107 12 12 11.4375 12 10.7143V1.28571C12 0.589283 11.4107 0 10.7143 0ZM10.7143 10.7143H1.28571V1.28571H10.7143V10.7143ZM9.75 4.25893C9.85714 4.125 9.85714 3.9375 9.75 3.80357L9.13393 3.1875C9.02678 3.05357 8.8125 3.05357 8.67858 3.1875L4.90179 6.9375L3.29464 5.33036C3.16071 5.19643 2.97322 5.19643 2.83929 5.33036L2.22321 5.91964C2.11608 6.05357 2.11608 6.26786 2.22321 6.375L4.66071 8.83929C4.79464 8.97322 4.98215 8.97322 5.11608 8.83929L9.75 4.25893Z" fill="#C4C4C4"/>
+                    </svg>  
+                    <svg class="unchecked" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7143 0H1.28571C0.5625 0 0 0.589283 0 1.28571V10.7143C0 11.4375 0.5625 12 1.28571 12H10.7143C11.4107 12 12 11.4375 12 10.7143V1.28571C12 0.589283 11.4107 0 10.7143 0ZM10.7143 10.7143H1.28571V6V1.28571H10.7143V10.7143Z" fill="#C4C4C4"/>
+                    </svg>                                                                              
+                    <p>
+                        Я принимаю условия <a href="#"> персональных данных</a>
+                    </p>
+                </label>
+            </div>
+        </div>
+    </div>
     <script src="./script/burger.js"></script>
     <script src="./script/jquery.slim.js"></script>
     <script src="./script/owl.carousel.min.js"></script>
@@ -686,7 +740,7 @@
             stagePadding: 350,
             responsive:{
                 1240: {
-                    stagePadding: 350,
+                    stagePadding: 380,
                 },
                 768: {
                     stagePadding: 150,

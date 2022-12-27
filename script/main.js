@@ -1,7 +1,7 @@
 const resumeCarouselClass = 'resume__form-wrapper';
 
 $(document).ready(function(){
-  startFormCarousel();
+    startFormCarousel();
 });
 function startFormCarousel(){
   const resumeCarousel = $(`.${resumeCarouselClass}`).owlCarousel({

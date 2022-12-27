@@ -23,6 +23,8 @@
                     filter: blur(0px)
             & .ceiling-types__description
                 opacity: 1
+            & .ceiling-types__btn
+                opacity: 1
     &__item
         background: $dark-bg
         transform: scale(0.9)
@@ -39,9 +41,20 @@
         width: fit-content
         opacity: 0
         transition: opacity .2s ease-in-out
+        margin-bottom: 25px
     &__text
         text-align: center
         margin-bottom: 8px
+    &__btn
+        margin: auto
+        padding: 5px 12px
+        max-width: 260px
+        margin-bottom: 30px
+        opacity: 0
+        transition: opacity .2s ease-in-out
+        &:hover
+            &::before
+                opacity: 0
 
 @media screen and (max-width: 1024px)
     .ceiling-types
