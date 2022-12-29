@@ -1,0 +1,82 @@
+.colored-bg-light
+    background-color: $light-bg
+
+.flex-row-reverse
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    align-items: center
+    & img
+        border-radius: 10px
+        width: 400px
+        margin-left: 30px
+
+.flex-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    & img
+        border-radius: 10px
+        width: 400px
+        margin-right: 30px
+
+.colored-list
+    &__title
+        font-size: 32px
+        color: #001804
+        margin-bottom: 28px
+    &__list
+        padding-left: 32px
+    &__item
+        position: relative
+        margin-bottom: 8px
+        &:before
+            content: ""
+            position: absolute
+            top: 14px
+            left: -32px
+            width: 10px
+            height: 10px
+            background: $primary
+            border-radius: 50%
+            transform: translateY(-50%)
+
+.primary-span
+    color: $primary
+    font-weight: 600
+
+@media screen and (max-width: 860px)
+    .flex-row-reverse
+        flex-direction: column-reverse
+        & img
+            margin-left: 0
+            margin-top: 20px
+    .flex-row
+        flex-direction: column-reverse
+        & img
+            margin-right: 0
+            margin-top: 20px
+    .colored-list
+        &__title
+            font-size: 24px
+            margin-bottom: 18px
+
+@media screen and (max-width: 600px)
+    .flex-row-reverse
+        & img
+            width: 100%
+    .flex-row
+        & img
+            width: 100%
+
+@media screen and (max-width: 425px)
+    .colored-list
+        &__list
+            padding-left: 16px
+        &__item
+            margin-bottom: 10px
+            &:before
+                top: 9px
+                left: -16px
+                width: 5px
+                height: 5px
