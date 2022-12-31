@@ -3932,3 +3932,25 @@ ul {
     padding: 36px 20px 20px;
   }
 }
+
+.thanks__hero {
+  padding: 36px 30px 20px;
+  position: relative;
+  max-width: 400px;
+}
+
+.thanks__title {
+  color: #03A762;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.thanks p {
+  text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+  .thanks__hero {
+    padding: 36px 20px 20px;
+  }
+}

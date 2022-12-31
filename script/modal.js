@@ -1,6 +1,7 @@
 const contactsModal = document.querySelector('.contacts');
 const costModal = document.querySelector('.cost');
 const orderModal = document.querySelector('.order');
+const thanksModal = document.querySelector('.thanks');
 
 if (contactsModal){
     //open contacts modal
@@ -72,4 +73,18 @@ if (orderModal){
     document.querySelector('.order__hero .modal__close').addEventListener('click', () => {closeOrderModal()});
     orderModal.addEventListener('click', () => {closeOrderModal()});
     document.querySelector('.order__hero').addEventListener('click', (e) => {e.stopPropagation()});
+}
+
+if(thanksModal){
+    //close thanks modal
+    const closeThanksModal = () => {
+        thanksModal.classList.remove('modal-visible');
+        setTimeout(() => {
+            thanksModal.classList.remove('modal-dispalayed');
+        }, 300);
+    };
+    
+    document.querySelector('.thanks__hero .modal__close').addEventListener('click', () => {closeThanksModal()});
+    thanksModal.addEventListener('click', () => {closeThanksModal()});
+    document.querySelector('.thanks__hero').addEventListener('click', (e) => {e.stopPropagation()});
 }
