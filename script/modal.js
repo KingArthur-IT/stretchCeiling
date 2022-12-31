@@ -64,6 +64,10 @@ if (orderModal){
     
     //close order modal
     const closeOrderModal = () => {
+        orderModal.querySelector('input[name]').value = '';
+        orderModal.querySelector('input[phone]').value = '';
+        orderModal.querySelector('.btn').classList.remove('active');
+
         orderModal.classList.remove('modal-visible');
         setTimeout(() => {
             orderModal.classList.remove('modal-dispalayed');
@@ -73,6 +77,46 @@ if (orderModal){
     document.querySelector('.order__hero .modal__close').addEventListener('click', () => {closeOrderModal()});
     orderModal.addEventListener('click', () => {closeOrderModal()});
     document.querySelector('.order__hero').addEventListener('click', (e) => {e.stopPropagation()});
+
+    const checkSendReady = () => {
+        const name = orderModal.querySelector('input[name]').value;
+        const phone = orderModal.querySelector('input[phone]').value;
+        const checkbox = orderModal.querySelector('input[type=checkbox]').checked;
+
+        return name.length > 4 && phone.length >= 10 && checkbox
+    }
+
+    orderModal.querySelector('.order__btn').addEventListener('click', () => {
+        const name = orderModal.querySelector('input[name]').value;
+        const phone = orderModal.querySelector('input[phone]').value;
+        const checkbox = orderModal.querySelector('input[type=checkbox]').checked;
+        
+        if (!checkSendReady()) return
+
+        //send action
+        closeOrderModal()
+
+        //open thanks modal
+        thanksModal.classList.add('modal-dispalayed');
+        setTimeout(() => {
+            thanksModal.classList.add('modal-visible');
+        }, 200);
+    });
+
+    orderModal.querySelector('input[name]').addEventListener('input', () => {
+        const isSendBtnActive = orderModal.querySelector('.btn').classList.contains('active')
+        if (checkSendReady() && !isSendBtnActive)
+            orderModal.querySelector('.btn').classList.add('active');
+        if (!checkSendReady() && isSendBtnActive)
+        orderModal.querySelector('.btn').classList.remove('active');
+    });
+    orderModal.querySelector('input[phone]').addEventListener('input', () => {
+        const isSendBtnActive = orderModal.querySelector('.btn').classList.contains('active')
+        if (checkSendReady() && !isSendBtnActive)
+            orderModal.querySelector('.btn').classList.add('active');
+        if (!checkSendReady() && isSendBtnActive)
+        orderModal.querySelector('.btn').classList.remove('active');
+    })
 }
 
 if(thanksModal){

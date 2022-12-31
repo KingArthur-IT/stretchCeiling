@@ -4,6 +4,13 @@
         position: relative
     &__btn
         width: 100%
+        filter: grayscale(1)
+        opacity: 0.8
+        cursor: default
+        &.active
+            filter: grayscale(0)
+            opacity: 1
+            cursor: pointer
     &__title
         color: $primary
         margin-bottom: 10px
