@@ -2220,6 +2220,17 @@ ul {
   line-height: 1.3;
   background: radial-gradient(100% 100% at 50% 0%, #5DD6A3 0%, #0A7F4E 100%);
   border-radius: 80px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.8;
+  cursor: default;
+}
+
+.resume__send-btn.active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
 }
 
 .resume__send-btn:active {
@@ -3730,9 +3741,15 @@ ul {
   }
 }
 
+.cost {
+  padding: 30px 0;
+  overflow-y: scroll;
+}
+
 .cost__hero {
   position: relative;
   padding: 20px 34px 16px;
+  margin-top: 100px;
 }
 
 .cost__square {
@@ -3760,6 +3777,30 @@ ul {
   caret-color: #03A762;
   text-align: center;
   font-size: 16px;
+}
+
+.cost__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #ECECEC;
+  border-radius: 96px;
+  border: none;
+  font-size: 24px;
+  padding: 24px 20px 20px;
+  outline-color: #03A762;
+  width: 150px;
+  caret-color: #03A762;
+  text-align: center;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+  margin-bottom: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cost__select::after {
+  content: '';
 }
 
 .cost__square-text {
@@ -3849,6 +3890,17 @@ ul {
   width: 320px;
   margin: 0 auto;
   margin-bottom: 16px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.8;
+  cursor: default;
+}
+
+.cost__send-btn.active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
 }
 
 .cost__send-btn:active {
@@ -3905,7 +3957,7 @@ ul {
 @media screen and (max-width: 425px) {
   .cost__hero {
     padding: 30px 20px 16px;
-    margin: 0 15px;
+    margin: 130px 15px 0;
   }
   .cost__rezult {
     width: 100%;

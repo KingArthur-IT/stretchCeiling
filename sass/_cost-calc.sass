@@ -1,7 +1,10 @@
 .cost
+    padding: 30px 0
+    overflow-y: scroll
     &__hero
         position: relative
         padding: 20px 34px 16px
+        margin-top: 100px
     &__square
         display: flex
         align-items: center
@@ -19,6 +22,27 @@
         caret-color: $primary
         text-align: center
         font-size: 16px
+    &__select
+        -webkit-appearance: none
+        -moz-appearance: none
+        background: #ECECEC
+        border-radius: 96px
+        border: none
+        font-size: 24px
+        padding: 24px 20px 20px
+        outline-color: $primary
+        width: 150px
+        caret-color: $primary
+        text-align: center
+        font-size: 16px
+        margin: auto
+        display: block
+        margin-bottom: 16px
+        cursor: pointer
+        position: relative
+        &::after
+            content: ''
+
     &__square-text
         margin-left: 15px
         font-size: 24px
@@ -79,6 +103,13 @@
         width: 320px
         margin: 0 auto
         margin-bottom: 16px
+        filter: grayscale(1)
+        opacity: 0.8
+        cursor: default
+        &.active
+            filter: grayscale(0)
+            opacity: 1
+            cursor: pointer
         &:active
             background: radial-gradient(100% 100% at 50% 0%, #51B088 0%, #08623C 100%)
     &__personal-data-wrap
@@ -111,7 +142,7 @@
     .cost
         &__hero
             padding: 30px 20px 16px
-            margin: 0 15px
+            margin: 130px 15px 0
         &__rezult
             width: 100%
             font-size: 24px

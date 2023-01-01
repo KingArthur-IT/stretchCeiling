@@ -32,6 +32,7 @@ if (costModal){
     //open contacts modal
     document.querySelectorAll('.open-cost-modal').forEach((el) => {
         el.addEventListener('click', () => {
+            document.querySelector('body').classList.add('overflow-hidden');
             costModal.classList.add('modal-dispalayed');
             setTimeout(() => {
                 costModal.classList.add('modal-visible');
@@ -41,6 +42,7 @@ if (costModal){
     
     //close cost modal
     const closeCostModal = () => {
+        document.querySelector('body').classList.remove('overflow-hidden');
         costModal.classList.remove('modal-visible');
         setTimeout(() => {
             costModal.classList.remove('modal-dispalayed');
@@ -50,6 +52,43 @@ if (costModal){
     document.querySelector('.cost__hero .modal__close').addEventListener('click', () => {closeCostModal()});
     costModal.addEventListener('click', () => {closeCostModal()});
     document.querySelector('.cost__hero').addEventListener('click', (e) => {e.stopPropagation()});
+
+    const nameCalcInput = costModal.querySelector('input[name]');
+    const phoneCalcInput = costModal.querySelector('input[phone]');
+    const checkboxCalc = costModal.querySelector('input[type=checkbox]');   
+    const sendCalcBtn = costModal.querySelector('.cost__send-btn');
+
+    const checkSendReady = () => {
+        return nameCalcInput.value.length > 4 && phoneCalcInput.value.length >= 10 && checkboxCalc.checked
+    }
+
+    sendCalcBtn.addEventListener('click', () => {
+       if (!checkSendReady()) return
+
+        //send action
+        // nameCalcInput.value
+        // phoneCalcInput.value
+        // checkboxCalc.checked
+
+        closeCostModal()
+
+        //open thanks modal
+        thanksModal.classList.add('modal-dispalayed');
+        setTimeout(() => {
+            thanksModal.classList.add('modal-visible');
+        }, 200);
+    });
+
+    const costInputHandle = () => {
+        const isSendBtnActive = sendCalcBtn.classList.contains('active')
+        if (checkSendReady() && !isSendBtnActive)
+            sendCalcBtn.classList.add('active');
+        if (!checkSendReady() && isSendBtnActive)
+            sendCalcBtn.classList.remove('active');
+    }
+
+    nameCalcInput.addEventListener('input', () => {costInputHandle()});
+    phoneCalcInput.addEventListener('input', () => {costInputHandle()});
 }
 
 if (orderModal){

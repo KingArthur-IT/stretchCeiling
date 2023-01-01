@@ -1,4 +1,5 @@
 const resumeCarouselClass = 'resume__form-wrapper';
+const resumeFormWrapper = document.querySelector('.resume__form-wrapper');
 
 $(document).ready(function(){
     startFormCarousel();
@@ -24,6 +25,41 @@ function startFormCarousel(){
     resumeCarousel.trigger('prev.owl.carousel');
   });
 };
+
+if (resumeFormWrapper){
+  const nameInput = resumeFormWrapper.querySelector('input[username]');
+  const phoneInput = resumeFormWrapper.querySelector('input[userphone]');   
+  const sendBtn = resumeFormWrapper.querySelector('.resume__send-btn');
+
+  const checkSendReady = () => {
+    return nameInput.value.length > 4 && phoneInput.value.length >= 10
+  }
+
+  sendBtn.addEventListener('click', () => {
+    if (!checkSendReady()) return
+
+      //send action
+      // nameInput.value
+      // phoneInput.value
+
+      //open thanks modal
+      thanksModal.classList.add('modal-dispalayed');
+      setTimeout(() => {
+          thanksModal.classList.add('modal-visible');
+      }, 200);
+  });
+
+  const inputHandle = () => {
+      const isSendBtnActive = sendBtn.classList.contains('active')
+      if (checkSendReady() && !isSendBtnActive)
+        sendBtn.classList.add('active');
+      if (!checkSendReady() && isSendBtnActive)
+        sendBtn.classList.remove('active');
+  }
+
+  nameInput.addEventListener('input', () => {inputHandle()});
+  phoneInput.addEventListener('input', () => {inputHandle()});
+}
 
 const measurementsPlanToday = document.getElementById('measurements-plan-today'),
       measurementsDoneToday = document.getElementById('measurements-done-today'),
