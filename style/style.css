@@ -2921,6 +2921,17 @@ ul {
   padding: 15px 0;
   color: #fff;
   margin-bottom: 10px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.8;
+  cursor: default;
+}
+
+.ceilings-head__btn.active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {

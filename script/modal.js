@@ -2,6 +2,7 @@ const contactsModal = document.querySelector('.contacts');
 const costModal = document.querySelector('.cost');
 const orderModal = document.querySelector('.order');
 const thanksModal = document.querySelector('.thanks');
+const ceilingForm = document.querySelector('.ceilings-head__form');
 
 if (contactsModal){
     //open contacts modal
@@ -78,22 +79,23 @@ if (orderModal){
     orderModal.addEventListener('click', () => {closeOrderModal()});
     document.querySelector('.order__hero').addEventListener('click', (e) => {e.stopPropagation()});
 
-    const checkSendReady = () => {
-        const name = orderModal.querySelector('input[name]').value;
-        const phone = orderModal.querySelector('input[phone]').value;
-        const checkbox = orderModal.querySelector('input[type=checkbox]').checked;
+    const nameInput = orderModal.querySelector('input[name]');
+    const phoneInput = orderModal.querySelector('input[phone]');
+    const checkbox = orderModal.querySelector('input[type=checkbox]');   
+    const sendBtn = orderModal.querySelector('.btn');
 
-        return name.length > 4 && phone.length >= 10 && checkbox
+    const checkSendReady = () => {
+        return nameInput.value.length > 4 && phoneInput.value.length >= 10 && checkbox.checked
     }
 
     orderModal.querySelector('.order__btn').addEventListener('click', () => {
-        const name = orderModal.querySelector('input[name]').value;
-        const phone = orderModal.querySelector('input[phone]').value;
-        const checkbox = orderModal.querySelector('input[type=checkbox]').checked;
-        
-        if (!checkSendReady()) return
+       if (!checkSendReady()) return
 
         //send action
+        // nameInput.value
+        // phoneInput.value
+        // checkbox.checked
+
         closeOrderModal()
 
         //open thanks modal
@@ -103,20 +105,16 @@ if (orderModal){
         }, 200);
     });
 
-    orderModal.querySelector('input[name]').addEventListener('input', () => {
-        const isSendBtnActive = orderModal.querySelector('.btn').classList.contains('active')
+    const orderInputHandle = () => {
+        const isSendBtnActive = sendBtn.classList.contains('active')
         if (checkSendReady() && !isSendBtnActive)
-            orderModal.querySelector('.btn').classList.add('active');
+            sendBtn.classList.add('active');
         if (!checkSendReady() && isSendBtnActive)
-        orderModal.querySelector('.btn').classList.remove('active');
-    });
-    orderModal.querySelector('input[phone]').addEventListener('input', () => {
-        const isSendBtnActive = orderModal.querySelector('.btn').classList.contains('active')
-        if (checkSendReady() && !isSendBtnActive)
-            orderModal.querySelector('.btn').classList.add('active');
-        if (!checkSendReady() && isSendBtnActive)
-        orderModal.querySelector('.btn').classList.remove('active');
-    })
+            sendBtn.classList.remove('active');
+    }
+
+    nameInput.addEventListener('input', () => {orderInputHandle()});
+    phoneInput.addEventListener('input', () => {orderInputHandle()});
 }
 
 if(thanksModal){
@@ -131,4 +129,47 @@ if(thanksModal){
     document.querySelector('.thanks__hero .modal__close').addEventListener('click', () => {closeThanksModal()});
     thanksModal.addEventListener('click', () => {closeThanksModal()});
     document.querySelector('.thanks__hero').addEventListener('click', (e) => {e.stopPropagation()});
+}
+
+if(ceilingForm){
+    const nameFormInput = ceilingForm.querySelector('input[name]');
+    const phoneFormInput = ceilingForm.querySelector('input[phone]');
+    const checkboxForm = ceilingForm.querySelector('input[type=checkbox]');   
+    const sendFormBtn = ceilingForm.querySelector('.btn');
+
+    const checkSendReady = () => {
+        return nameFormInput.value.length > 4 && phoneFormInput.value.length >= 10 && checkboxForm.checked
+    }
+
+    sendFormBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!checkSendReady()) return
+ 
+         //send action
+         // nameFormInput.value
+         // phoneFormInput.value
+         // checkboxForm.checked
+
+         nameFormInput.value = '';
+         phoneFormInput.value = '';
+         checkboxForm.checked = true;
+         sendFormBtn.classList.remove('active')
+ 
+         //open thanks modal
+         thanksModal.classList.add('modal-dispalayed');
+         setTimeout(() => {
+             thanksModal.classList.add('modal-visible');
+         }, 200);
+     });
+ 
+     const formInputHandle = () => {
+         const isSendBtnActive = sendFormBtn.classList.contains('active')
+         if (checkSendReady() && !isSendBtnActive)
+            sendFormBtn.classList.add('active');
+         if (!checkSendReady() && isSendBtnActive)
+            sendFormBtn.classList.remove('active');
+     }
+ 
+     nameFormInput.addEventListener('input', () => {formInputHandle()});
+     phoneFormInput.addEventListener('input', () => {formInputHandle()})
 }
