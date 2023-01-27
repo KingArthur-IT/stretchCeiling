@@ -1,6 +1,7 @@
 .resume
     background-color: $light-bg
     overflow: hidden
+    padding-bottom: 0
     &__bottom-design
         position: absolute
         bottom: 0
@@ -52,6 +53,7 @@
         min-height: 400px
         display: flex
         flex-direction: column
+        margin-bottom: 40px
     &__form-question
         font-weight: 700
         font-size: 32px
@@ -105,7 +107,8 @@
         align-items: center
         justify-content: flex-end
         & svg
-            transition: transform 0.1s ease-in
+            transform: translateX(0)
+            transition: transform 0.4s ease-in
         &:hover svg
             transform: translateX(5px)
     &__control
@@ -125,18 +128,23 @@
     &__input
         background: #ECECEC
         border-radius: 96px
-        border: none
+        border: 2px solid transparent
         font-size: 24px
         padding: 26px 20px 20px
-        outline-color: $primary
+        outline: none
         min-width: 390px
         caret-color: $primary
+        transition: border .3s ease
         &::placeholder
             font-weight: 400
             font-size: 14px
             line-height: 130%
             color: #BDBDBD
             transform: translateY(-3px)
+        &:focus
+            border: 2px solid $primary
+        &:active
+            border: 2px solid $primary
     &__square-text
         margin-left: 26px
         font-size: 24px
@@ -230,10 +238,34 @@
         filter: grayscale(1)
         opacity: 0.8
         cursor: default
+        transform: translateY(0)
+        transition: all .3s ease 
+        z-index: 1
+        &::before
+            content: ""
+            position: absolute
+            background: rgba(8, 96, 59, 0.8)
+            filter: blur(17px)
+            border-radius: 80px
+            top: 23px
+            bottom: -23px
+            left: 0
+            right: 0
+            z-index: -1
+            opacity: 0
+            transition: all .3s ease-in-out
+            -webkit-backface-visibility: hidden
+            -moz-backface-visibility: hidden
+            -webkit-transform: translate3d(0, 0, 0)
+            -moz-transform: translate3d(0, 0, 0)
         &.active
             filter: grayscale(0)
             opacity: 1
             cursor: pointer
+            &:hover
+                transform: translateY(-5px)
+                &:before
+                    opacity: 1
         &:active
             background: radial-gradient(100% 100% at 50% 0%, #51B088 0%, #08623C 100%)
 .ml-auto

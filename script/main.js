@@ -51,10 +51,12 @@ if (resumeFormWrapper){
 
   const inputHandle = () => {
       const isSendBtnActive = sendBtn.classList.contains('active')
-      if (checkSendReady() && !isSendBtnActive)
+      if (checkSendReady() && !isSendBtnActive) {
         sendBtn.classList.add('active');
-      if (!checkSendReady() && isSendBtnActive)
+      }
+      if (!checkSendReady() && isSendBtnActive) {
         sendBtn.classList.remove('active');
+      }
   }
 
   nameInput.addEventListener('input', () => {inputHandle()});
