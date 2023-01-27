@@ -2854,12 +2854,14 @@ ul {
 .ceilings-head__input {
   background: #ECECEC;
   border-radius: 96px;
-  border: none;
+  border: 2px solid transparent;
   font-size: 24px;
   padding: 26px 20px 20px;
-  outline-color: #03A762;
+  outline: none;
   width: 100%;
   caret-color: #03A762;
+  -webkit-transition: border .3s ease;
+  transition: border .3s ease;
 }
 
 .ceilings-head__input::-webkit-input-placeholder {
@@ -2896,6 +2898,14 @@ ul {
           transform: translateY(-3px);
 }
 
+.ceilings-head__input:focus {
+  border: 2px solid #03A762;
+}
+
+.ceilings-head__input:active {
+  border: 2px solid #03A762;
+}
+
 .ceilings-head__personal-data-wrap {
   position: relative;
   margin: auto;
@@ -2905,6 +2915,7 @@ ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  z-index: 3;
 }
 
 .ceilings-head__personal-data-wrap label {
@@ -2982,11 +2993,24 @@ ul {
   width: 100%;
   padding: 15px 0;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: 0.8;
   cursor: default;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.ceilings-head__btn:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.ceilings-head__btn:hover:before {
+  opacity: 0;
 }
 
 .ceilings-head__btn.active {
@@ -2994,6 +3018,15 @@ ul {
           filter: grayscale(0);
   opacity: 1;
   cursor: pointer;
+}
+
+.ceilings-head__btn.active:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.ceilings-head__btn.active:hover:before {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3651,12 +3684,21 @@ ul {
   max-width: 260px;
   margin-bottom: 30px;
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
-  transition: opacity .2s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.ceiling-types__btn:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .ceiling-types__btn:hover::before {
-  opacity: 0;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {

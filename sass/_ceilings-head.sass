@@ -23,18 +23,23 @@
     &__input
         background: #ECECEC
         border-radius: 96px
-        border: none
+        border: 2px solid transparent
         font-size: 24px
         padding: 26px 20px 20px
-        outline-color: $primary
+        outline: none
         width: 100%
         caret-color: $primary
+        transition: border .3s ease
         &::placeholder
             font-weight: 400
             font-size: 14px
             line-height: 130%
             color: #BDBDBD
             transform: translateY(-3px)
+        &:focus
+            border: 2px solid $primary
+        &:active
+            border: 2px solid $primary
     &__personal-data-wrap
         position: relative
         margin: auto
@@ -42,6 +47,7 @@
         line-height: 130%
         color: #BDBDBD
         width: fit-content
+        z-index: 3
         & label
             display: flex
             align-items: center
@@ -84,14 +90,24 @@
         width: 100%
         padding: 15px 0
         color: #fff
-        margin-bottom: 10px
+        margin-bottom: 20px
         filter: grayscale(1)
         opacity: 0.8
         cursor: default
+        transform: translateY(0)
+        transition: all .3s ease 
+        &:hover
+            transform: translateY(0)
+            &:before
+                opacity: 0
         &.active
             filter: grayscale(0)
             opacity: 1
             cursor: pointer
+            &:hover
+                transform: translateY(-5px)
+                &:before
+                    opacity: 1
 
 @media screen and (max-width: 1024px)
     .ceilings-head

@@ -51,10 +51,15 @@
         max-width: 260px
         margin-bottom: 30px
         opacity: 0
-        transition: opacity .2s ease-in-out
+        transition: all .3s ease-in-out
+        -webkit-backface-visibility: hidden
+        -moz-backface-visibility: hidden
+        -webkit-transform: translate3d(0, 0, 0)
+        -moz-transform: translate3d(0, 0, 0)
         &:hover
+            transform: translateY(-5px)
             &::before
-                opacity: 0
+                opacity: 1
 
 @media screen and (max-width: 1024px)
     .ceiling-types
